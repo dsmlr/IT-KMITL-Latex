@@ -1,0 +1,76 @@
+\documentclass{itkmitl}
+
+\usepackage{afterpage}
+\usepackage{graphicx,amsmath,latexsym,amssymb,amsthm}
+\usepackage{indentfirst}
+\usepackage{cite}
+\usepackage{subfigure}
+\graphicspath{ {images/} }
+
+%1. Your thesis title (in block letters)
+\newcommand{\ThesisTiTle}{ชื่อเรื่อง}
+%3. Your name
+\newcommand{\AuName}{ชื่อผู้เขียน}
+%4. Your student ID
+\newcommand{\SId}{รหัสประจำตัวนักศึกษา}
+%5. Your advisor (in normal letters)
+\newcommand{\Advisor}{อาจารย์ที่ปรึกษา}
+%6. Your Examiner 1 (in normal letters)
+\newcommand{\Exami}{พนักงานที่ปรึกษา}
+%7. สถานประกอบการ
+\newcommand{\Company}{สถานที่ประกอบการ}
+%8. ภาคเรียนที่ (in normal letters)
+\newcommand{\Sem}{เทอม}
+%9. ปีการศึกษา (in normal letters)
+\newcommand{\AcaY}{ปีการศึกษา}
+%10. วันส่งรายงาน
+\newcommand{\SubD}{01 มกราคม พ.ศ. 2501}
+%11. สาขา
+\newcommand{\Department}{สาขาวิชา}
+%12. วันเริ่มทำงาน
+\newcommand{\StartDWork}{01 มกราคม พ.ศ. 2501}
+%12. วันสุดท้ายของการทำงาน
+\newcommand{\EndDWork}{01 มกราคม พ.ศ. 2501}
+
+\begin{document}    
+    \frontmatter
+    
+    \makecover    
+    \makeinnercover
+    \makeletter
+    \makeack{
+        \begin{enumerate}
+            \item คุณ ชื่อ สกุล \quad ตำแหน่ง xxxxxxx
+        \end{enumerate}
+    }
+    \makeapproveletter
+    \makeabstract{
+        บทคัดย่อ
+    }
+
+    \newpage
+    \addcontentsline{toc}{chapter}{สารบัญ}
+    \tableofcontents
+    
+    \newpage
+    \addcontentsline{toc}{chapter}{สารบัญตาราง}
+    \listoftables    
+    
+    \newpage
+    \addcontentsline{toc}{chapter}{สารบัญภาพ}
+    \listoffigures
+
+    \mainmatter
+    
+    \include{chapter1}
+    \include{chapter2}
+    \include{chapter3}
+    \include{chapter4}
+    \include{chapter5}
+    
+    \clearpage
+    \addcontentsline{toc}{chapter}{บรรณานุกรม}
+    \bibliographystyle{IEEEtran}
+    \bibliography{reference}
+    
+\end{document}
