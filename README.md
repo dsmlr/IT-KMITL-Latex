@@ -1,4 +1,4 @@
-# IT-KMITL-Latex
+# IT@KMITL Latex Template
 The latex class for writing a thesis and a cooperation report.
 
 ## Build tools
