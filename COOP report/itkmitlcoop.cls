@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{itkmitl}[2018/11/09]
+\ProvidesClass{itkmitlcoop}[2018/11/09]
 
 \LoadClass[12pt, a4paper, oneside]{book}
 
