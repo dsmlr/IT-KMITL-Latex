@@ -16,6 +16,7 @@
 \RequirePackage{ifthen}
 \RequirePackage{lineno}
 \RequirePackage{afterpage}
+\RequirePackage{subfigure}
 
 % ##### new command for Roman number
 \newcommand{\rNum}[1]{\lowercase\expandafter{\romannumeral #1\relax}}
@@ -255,7 +256,7 @@
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
             \textbf{ชื่อรายงานการปฏิบัติงานสหกิจศึกษา} & \ThesisTiTle \\
-            \textbf{ผู้รายงาน} & \AuName \\\
+            \textbf{ผู้รายงาน} & \AuName \\
             \textbf{คณะ} & เทคโนโลยีสารสนเทศ \\
             \textbf{สาขาวิชา} & \Department
         \end{tabularx}
