@@ -62,6 +62,15 @@
     \lfoot{}\cfoot{}\rfoot{}
 }
 
+% ##### Override subfigure to use Thai alpha instead of English
+\def\thaialph#1{\expandafter\thalph\csname c@#1\endcsname}
+\def\thalph#1{%
+    \ifcase#1\or ก\or ข\or ค\or ง\or จ\or ฉ\or ช\or ซ\or
+    ฌ\or ญ\or ฎ\or ฏ\or ฐ\or ฑ\or ฒ\or ณ\or ด\or ต\or ถ\or ท\or ธ\or น\or
+    บ\or ป\or ผ\or ฝ\or พ\or ฟ\or ภ\or ม\or ย\or ร\or ฤ\or ล\or ฦ\or ว\or
+    ศ\or ษ\or ส\or ห\or ฬ\or อ\else ฮ\else\xpg@ill@value{#1}{thalph}\fi}
+\renewcommand\thesubfigure{(\thaialph{subfigure})}
+
 % ##### TOC Overrided 
 % อ้างอิงจาก http://kt-linux.blogspot.com/2011/01/latex.html
 %ตั้งค่าความลึกของหน้าสารบัญใหม่เป็น 1 (คือลงลึกแค่ชั้นเดียว) และตั้งค่าคำสั่ง \tableofcontents ใหม่
