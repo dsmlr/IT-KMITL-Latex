@@ -292,3 +292,14 @@
     
     #1
 }
+
+\newcommand\startappendix{
+    \appendix
+    \renewcommand*{\appendixname}{ภาคผนวก}
+    \renewcommand{\thechapter}{\thaialph{chapter}}
+    
+    \titlecontents{chapter}[0mm]
+    {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{สารบัญ}}
+    {ภาคผนวก\hspace{1ex}\thecontentslabel\hspace{2mm}}
+    {}{\hfill \contentspage}
+}
