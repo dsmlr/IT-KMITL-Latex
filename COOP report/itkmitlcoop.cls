@@ -164,9 +164,12 @@
 \newcommand{\makecover}{
     % ปกนอก
     \thispagestyle{empty}
+    
     \begin{center}
         \Large{\textbf{รายงานการปฏิบัติงานสหกิจศึกษา}} \\
-        \LARGE{\textbf{เรื่อง \ThesisTiTle}} \vskip4cm
+        \LARGE{\textbf{เรื่อง}} \\
+        \LARGE{\textbf{\ThesisTiTle}} \\
+        \LARGE{\textbf{\ThesisTiTleENG}} \vskip3cm
         \Large{\textbf{ปฎิบัติงาน ณ \Company}} \vskip1cm
         \Large{\textbf{โดย}} \vskip1cm
         \Large{\textbf{\AuName}}  \\
@@ -184,16 +187,44 @@
     \thispagestyle{empty}
     \begin{center}
         \Large{\textbf{รายงานการปฏิบัติงานสหกิจศึกษา}} \\
-        \LARGE{\textbf{เรื่อง \ThesisTiTle}} \vskip4cm
+        \LARGE{\textbf{\ThesisTiTle}} \\
+        \LARGE{\textbf{\ThesisTiTleENG}} \vskip4cm
         \Large{\textbf{ปฎิบัติงาน ณ \Company}} \vskip1cm
         \Large{\textbf{โดย}} \vskip1cm
         \Large{\textbf{\AuName}}  \\
         \Large{\textbf{รหัสประจำตัว \SId}} \null \vfill
-        \large{\textbf{ปฏิบัติงาน ณ มหาลัยวิทยาลัยฮอกไกโด \\
-                Hokkaido University Kita 8, Nishi 5, Kita-ku, \\
-                Sapporo, Hokkaido, 060-0808 Japan \\ 
-                Web site : www.global.hokudai.ac.jp }}
+        \large{\textbf{ปฏิบัติงาน ณ \Company \\
+                \Address \\ 
+                Web site : \Website}}
     \end{center}
+}
+
+\newcommand{\makeengcover}{
+    % ปกอังกฤษ
+    \newpage
+    \thispagestyle{empty}
+    \begin{center}
+        \LARGE{\textbf{\ThesisTiTleENG}} \vskip7cm
+        \Large{\textbf{\AuNameENG}}  \null \vfill
+        \large{\textbf{A REPORT SUBMITTED IN PARTIAL FULFILLMENT OF \\
+                THE REQUIREMENT FOR COOPERATING EDUCATION PROGRAM \\
+                THE DEGREE OF BACHELOR OF SCIENCE PROGRAM IN \\
+                INFORMATION TECHNOLOGY \\
+                FACULTY OF INFORMATION TECNOLOGY \\
+                KING MONGKUT’S INSTITUTE OF TECHNOLOGY LADKRABANG \\
+                \Sem / \AcaYAD}}
+    \end{center}
+}
+
+\newcommand{\makecopyrightcover}{
+    \newpage
+    \thispagestyle{empty}
+    \null\vfill
+    \begin{large}
+        \noindent\textbf{COPYRIGHT \AcaYAD \\
+            FACULTY OF INFORMATION TECHNOLOGY \\
+            KING MONGKUT’S INSTITUTE OF ECHNOLOGY LADKRABANG}
+    \end{large}
 }
 
 \newcommand{\makeletter}{
@@ -208,7 +239,7 @@
     \noindent เรื่อง ขอส่งรายงานการปฏิบัติงานสหกิจศึกษา \\
     เรียน \Advisor \vskip0.1cm
     
-    \hskip0.2cm ที่ปรึกษาสหกิจศึกษาในสาขา \Department \vskip1cm
+    \hskip0.2cm ที่ปรึกษาสหกิจศึกษาในสาขาเทคโนโลยีสารสนเทศ (\Department) \vskip1cm
     
     ตามที่ข้าพเจ้า \AuName \ นักศึกษาสาขาวิชา \Department คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ได้ปฏิบัติงานสหกิจศึกษาระหว่างวันที่ \StartDWork \ ถึงวันที่ \EndDWork \ ในตำแหน่ง ผู้ช่วยนักวิจัย ณ สถานประกอบการชื่อ \Company \ และได้รับมอบหมายจากพนักงานที่ปรึกษาให้ศึกษาและจัดทำรายงาน เรื่อง \ThesisTiTle
     
