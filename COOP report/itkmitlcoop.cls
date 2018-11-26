@@ -317,7 +317,7 @@
     
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
-        	\textbf{ชื่อรายงาน} & \ThesisTiTle \\
+            \textbf{ชื่อรายงาน} & \ThesisTiTle \\
             \textbf{ชื่อนักศึกษา} & \AuName \\
             \textbf{รหัสนักศึกษา} & \SId \\
             \textbf{สาขาวิชา} & \Department \\
