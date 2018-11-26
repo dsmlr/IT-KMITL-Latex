@@ -4,38 +4,51 @@
 \usepackage{graphicx,amsmath,latexsym,amssymb,amsthm}
 \usepackage{indentfirst}
 \usepackage{cite}
+
 \graphicspath{ {images/} }
 
-%1. Your thesis title (in block letters)
-\newcommand{\ThesisTiTle}{ชื่อเรื่อง}
+%1. Your thesis title (THAI)
+\newcommand{\ThesisTiTle}{ชื่อโปรเจ็กต์จบ}
+%2. Your thesis title (ENG)
+\newcommand{\ThesisTiTleENG}{Project name (English)}
 %3. Your name
-\newcommand{\AuName}{ชื่อผู้เขียน}
-%4. Your student ID
-\newcommand{\SId}{รหัสประจำตัวนักศึกษา}
-%5. Your advisor (in normal letters)
-\newcommand{\Advisor}{อาจารย์ที่ปรึกษา}
-%6. Your Examiner 1 (in normal letters)
-\newcommand{\Exami}{พนักงานที่ปรึกษา}
-%7. สถานประกอบการ
-\newcommand{\Company}{สถานที่ประกอบการ}
-%8. ภาคเรียนที่ (in normal letters)
-\newcommand{\Sem}{เทอม}
-%9. ปีการศึกษา (in normal letters)
-\newcommand{\AcaY}{ปีการศึกษา}
-%10. วันส่งรายงาน
-\newcommand{\SubD}{01 มกราคม พ.ศ. 2501}
-%11. สาขา
-\newcommand{\Department}{สาขาวิชา}
-%12. วันเริ่มทำงาน
-\newcommand{\StartDWork}{01 มกราคม พ.ศ. 2501}
-%12. วันสุดท้ายของการทำงาน
-\newcommand{\EndDWork}{01 มกราคม พ.ศ. 2501}
+\newcommand{\AuName}{ชื่อ นามสกุล}
+%4. Your name ENG
+\newcommand{\AuNameENG}{Name Surname}
+%5. Your student ID
+\newcommand{\SId}{รหัสประจำตัว}
+%6. Your advisor
+\newcommand{\Advisor}{ชื่อที่ปรึกษา}
+%7. Your advisor employee
+\newcommand{\Exami}{ชื่อพนักงานที่ปรึกษา}
+%8. สถานประกอบการ
+\newcommand{\Company}{ชื่อบริษัท}
+%9. ภาคเรียนที่ (in normal letters)
+\newcommand{\Sem}{1}
+%10. ปีการศึกษา (in normal letters)
+\newcommand{\AcaY}{2561}
+%11. ปีการศึกษา (in normal letters)
+\newcommand{\AcaYAD}{2018}
+%12. วันส่งรายงาน
+\newcommand{\SubD}{10 พฤศจิกายน พ.ศ. 2561}
+%13. สาขา
+\newcommand{\Department}{วิศวกรรมซอร์ฟแวร์}
+%14. วันเริ่มทำงาน
+\newcommand{\StartDWork}{23 กรกฎาคม พ.ศ. 2561}
+%15. วันสุดท้ายของการทำงาน
+\newcommand{\EndDWork}{30 พฤศจิกายน พ.ศ. 2561}
+%16. ที่อยู่สถานประกอบการ
+\newcommand{\Address}{ที่อยู่}
+%17. เว็บไซต์สถานประกอบการ
+\newcommand{\Website}{เว็บไซต์}
 
 \begin{document}    
     \frontmatter
     
     \makecover    
     \makeinnercover
+    \makeengcover
+    \makecopyrightcover
     \makeletter
     \makeack{
         \begin{enumerate}
