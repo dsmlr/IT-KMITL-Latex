@@ -113,15 +113,31 @@
 
 % tocitem format for chapter
 \titlecontents{chapter}[0mm]
-{\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{สารบัญ}}
+{\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{\contentsname}}
 {\chaptername\hspace{1ex}\thecontentslabel\hspace{2mm}}
 {}{\hfill \contentspage}
 
 % tocitem format for section
 \titlecontents{section}[0mm]
-{\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{สารบัญ}}
+{\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{\contentsname}}
 {\hspace{6ex}\thecontentslabel\hspace{2mm}}{\hspace{6ex}\thecontentslabel\hspace{2mm}}
 {\hfill \contentspage}
+
+% ##### LOT Overrided 
+\newcommand{\lotheadcont}[3]{
+    \ifthenelse{#1>29 \OR #2>29}{
+        %Should be a newpage here.
+        \pagebreak[4]
+        \resetlinenumber[1]
+        \setcounter{lotitem}{1}
+        \begin{center}
+            {\LARGE \textbf{#3 (ต่อ)} }
+        \end{center}  \vskip2em
+        \begin{flushright}
+            \textbf{หน้า}
+        \end{flushright}
+    }{}
+}
 
 \renewcommand\listoftables{%
     \begin{center}
@@ -131,15 +147,29 @@
         \textbf{หน้า}
     \end{flushright}
     \resetlinenumber[1]
-    \setcounter{tocitem}{0}
+    \newcounter{lotitem}
     \@starttoc{lot}%
-    \setcounter{tocitem}{0}
     \clearpage
-    \pagewiselinenumbers
     \cleardoublepage
 }
 
-\titlecontents{table}[0mm]{\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{\listftablename}}{\contentspush{\tablename\hspace{1ex}\thecontentslabel\hspace{2mm}}}{}{\hfill \contentspage}
+\titlecontents{table}[0mm]{\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listftablename}}{\contentspush{\tablename\hspace{1ex}\thecontentslabel\hspace{2mm}}}{}{\hfill \contentspage}
+
+% ##### LOF Overrided 
+\newcommand{\lofheadcont}[3]{
+    \ifthenelse{#1>29 \OR #2>29}{
+        %Should be a newpage here.
+        \pagebreak[4]
+        \resetlinenumber[1]
+        \setcounter{lofitem}{1}
+        \begin{center}
+            {\LARGE \textbf{#3 (ต่อ)} }
+        \end{center}  \vskip2em
+        \begin{flushright}
+            \textbf{หน้า}
+        \end{flushright}
+    }{}
+}
 
 \renewcommand\listoffigures{%
     \begin{center}
@@ -149,16 +179,15 @@
         \textbf{หน้า}
     \end{flushright}
     \resetlinenumber[1]
-    \setcounter{tocitem}{0}
-    \@starttoc{lof}%
-    \setcounter{tocitem}{0}
-    \clearpage
+    \newcounter{lofitem}
+    \@starttoc{lof}
     \pagewiselinenumbers
+    \clearpage
     \cleardoublepage
 }
 
 % Indent the next line of the entry by the width of the label with \contentspush
-\titlecontents{figure}[0mm]{\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{\listfigurename}}{\contentspush{\figurename\hspace{1ex}\thecontentslabel\hspace{2mm}}}{}{\hfill \contentspage}
+\titlecontents{figure}[0mm]{\stepcounter{lofitem}\lofheadcont{\thelinenumber}{\thelofitem}{\listfigurename}}{\contentspush{\figurename\hspace{1ex}\thecontentslabel\hspace{2mm}}}{}{\hfill\contentspage}
 
 %  Newcommand each required page
 \newcommand{\makecover}{
@@ -325,7 +354,6 @@
             \textbf{ปีการศึกษา} & \AcaY
         \end{tabularx}
     \end{table}
-    
     
     \vskip1cm
     \begin{center}
