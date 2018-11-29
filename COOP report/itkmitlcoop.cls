@@ -363,6 +363,30 @@
     #1
 }
 
+\newcommand{\makeabstracteng}[1]{
+    %-- Abstract Page ------------------------------------------
+    \newpage
+    \addcontentsline{toc}{chapter}{บทคัดย่อภาษาอังกฤษ}
+    
+    \begin{table}[h]
+        \begin{tabularx}{\linewidth}{lX}
+            \textbf{Project Title} & \ThesisTiTleEng \\
+            \textbf{Name} & \AuNameEng \\
+            \textbf{Student ID} & \SId \\
+            \textbf{Department} & \DepartmentEng \\
+            \textbf{Advisor} & \AdvisorEng \\
+            \textbf{Year} & \AcaY
+        \end{tabularx}
+    \end{table}    
+    
+    \vskip1cm
+    \begin{center}
+        \textbf{\large Abstract}
+    \end{center}
+    
+    #1
+}
+
 \newcommand\startappendix{
     \appendix
     \renewcommand*{\appendixname}{ภาคผนวก}
