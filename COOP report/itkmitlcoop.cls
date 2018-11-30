@@ -17,6 +17,7 @@
 \RequirePackage{lineno}
 \RequirePackage{afterpage}
 \RequirePackage{subfigure}
+\RequirePackage{etoolbox}
 
 % ##### new command for Roman number
 \newcommand{\rNum}[1]{\lowercase\expandafter{\romannumeral #1\relax}}

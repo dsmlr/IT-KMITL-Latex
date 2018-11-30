@@ -7,6 +7,12 @@
 
 \graphicspath{ {images/} }
 
+\makeatletter
+% \patchcmd{<cmd>}{<search>}{<replace>}{<succes>}{<failure>}
+\patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
+\patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
+\makeatother
+
 %1. Your thesis title (THAI)
 \newcommand{\ThesisTiTle}{ชื่อโปรเจ็กต์จบ}
 %2. Your thesis title (ENG)
