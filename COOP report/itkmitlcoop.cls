@@ -54,13 +54,12 @@
 \pagestyle{fancy}
 \fancyhf{} 
 \renewcommand{\headrulewidth}{0pt}
-\lhead{}\rhead{\thepage}\chead{}
-\lfoot{}\cfoot{}\rfoot{}
+
 
 % ##### Override the plain style to make the first chapter page same with other pages
 \fancypagestyle{plain}{
     \renewcommand{\headrulewidth}{0pt}
-    \lhead{}\rhead{\thepage}\chead{}
+    \lhead{}\rhead{}\chead{}
     \lfoot{}\cfoot{}\rfoot{}
 }
 
@@ -259,9 +258,9 @@
 
 \newcommand{\makeletter}{
     %-- หนังสือส่งรายงานการปฏิบัติงานสหกิจศึกษา -------------------------------------------
-    \setcounter{page}{0}
+    \thispagestyle{empty}
     \newpage
-    \addcontentsline{toc}{chapter}{หนังสือส่งรายงานการปฏิบัติงานสหกิจศึกษา}
+    \addcontentsline{toc}{chapter}{จดหมายนำส่งรายงาน}
     \begin{flushright}
         วันที่ \SubD
     \end{flushright}
@@ -289,8 +288,11 @@
 
 \newcommand{\makeack}[1]{
     %-- ACKNOWLEDGEMENTS Page -------------------------------------------
+    \thispagestyle{empty}
     \newpage
-    \chapter*{กิตติกรรมประกาศ}
+    \begin{center}
+        {\LARGE \textbf{กิตติกรรมประกาศ} }
+    \end{center} \vskip2em
     \addcontentsline{toc}{chapter}{กิตติกรรมประกาศ}
     
     ตามที่ข้าพเจ้า \AuName \ ได้มาปฏิบัติงานสหกิจศึกษา ณ \Company \ ตั้งแต่วันที่ \StartDWork \ ถึงวันที่ \EndDWork \ ทำให้ข้าพเจ้าได้รับความรู้และประสบการณ์ต่าง ๆ ที่มีคุณค่ามากมาย สำหรับรายงานสหกิจศึกษาฉบับนี้สำเร็จลงได้ด้วยดี จากความช่วยเหลือและความร่วมมือสนับสนุนของหลายฝ่าย ดังนี้ 
@@ -312,6 +314,7 @@
 \newcommand{\makeapproveletter}{
     %-X- หน้าอนุมัติรายงาน -X------------------------------------------
     % Do NOT EDIT this page
+    \thispagestyle{empty}
     \newpage
     \addcontentsline{toc}{chapter}{หน้าอนุมัติรายงาน}
     \begin{table}[h]
@@ -342,6 +345,7 @@
 
 \newcommand{\makeabstract}[1]{
     %-- Abstract Page ------------------------------------------
+    \setcounter{page}{0}
     \newpage
     \addcontentsline{toc}{chapter}{บทคัดย่อ}
     
@@ -367,7 +371,7 @@
 \newcommand{\makeabstracteng}[1]{
     %-- Abstract Page ------------------------------------------
     \newpage
-    \addcontentsline{toc}{chapter}{บทคัดย่อภาษาอังกฤษ}
+    \addcontentsline{toc}{chapter}{บทคัดย่อ ภาษาอังกฤษ}
     
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
