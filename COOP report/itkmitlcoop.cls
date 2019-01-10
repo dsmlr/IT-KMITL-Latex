@@ -246,8 +246,8 @@
 }
 
 \newcommand{\makecopyrightcover}{
-	\newpage
-	\thispagestyle{empty}
+    \newpage
+    \thispagestyle{empty}
     \null\vfill
     \begin{large}
         \noindent\textbf{COPYRIGHT \AcaYAD \\
