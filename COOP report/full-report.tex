@@ -49,9 +49,8 @@
 \newcommand{\Position}{ตำแหน่งงานที่ปฏิบัติ}
 
 \begin{document}    
-    \frontmatter
-    \lhead{}\rhead{}\chead{}\lfoot{}\cfoot{\thepage}\rfoot{}
-    
+	\frontmatter
+	\lhead{}\rhead{}\chead{}\lfoot{}\cfoot{\thepage}\rfoot{}
     \makecover    
     \makeinnercover
     \makeengcover
@@ -63,6 +62,8 @@
         \end{enumerate}
     }
     \makeapproveletter
+   
+    \newgeometry{top=1in, bottom=1in, left=1.5in, right=1in, includefoot}
     \makeabstract{
     	บทคัดย่อ
     }
@@ -81,6 +82,7 @@
     \newpage
     \addcontentsline{toc}{chapter}{สารบัญภาพ}
     \listoffigures
+    \restoregeometry
 
     \mainmatter
     \lhead{}\rhead{\thepage}\chead{}\lfoot{}\cfoot{}\rfoot{}

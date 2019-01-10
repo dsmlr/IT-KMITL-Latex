@@ -246,8 +246,8 @@
 }
 
 \newcommand{\makecopyrightcover}{
-    \newpage
-    \thispagestyle{empty}
+	\newpage
+	\thispagestyle{empty}
     \null\vfill
     \begin{large}
         \noindent\textbf{COPYRIGHT \AcaYAD \\
@@ -258,8 +258,8 @@
 
 \newcommand{\makeletter}{
     %-- หนังสือส่งรายงานการปฏิบัติงานสหกิจศึกษา -------------------------------------------
-    \thispagestyle{empty}
     \newpage
+    \thispagestyle{empty}
     \addcontentsline{toc}{chapter}{จดหมายนำส่งรายงาน}
     \begin{flushright}
         วันที่ \SubD
@@ -288,8 +288,8 @@
 
 \newcommand{\makeack}[1]{
     %-- ACKNOWLEDGEMENTS Page -------------------------------------------
-    \thispagestyle{empty}
     \newpage
+    \thispagestyle{empty}
     \begin{center}
         {\LARGE \textbf{กิตติกรรมประกาศ} }
     \end{center} \vskip2em
@@ -314,8 +314,8 @@
 \newcommand{\makeapproveletter}{
     %-X- หน้าอนุมัติรายงาน -X------------------------------------------
     % Do NOT EDIT this page
-    \thispagestyle{empty}
     \newpage
+    \thispagestyle{empty}
     \addcontentsline{toc}{chapter}{หน้าอนุมัติรายงาน}
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
@@ -345,7 +345,7 @@
 
 \newcommand{\makeabstract}[1]{
     %-- Abstract Page ------------------------------------------
-    \setcounter{page}{0}
+    \setcounter{page}{1}
     \newpage
     \addcontentsline{toc}{chapter}{บทคัดย่อ}
     
