@@ -260,7 +260,6 @@
     %-- หนังสือส่งรายงานการปฏิบัติงานสหกิจศึกษา -------------------------------------------
     \newpage
     \thispagestyle{empty}
-    \addcontentsline{toc}{chapter}{จดหมายนำส่งรายงาน}
     \begin{flushright}
         วันที่ \SubD
     \end{flushright}
@@ -289,7 +288,6 @@
 \newcommand{\makeack}[1]{
     %-- ACKNOWLEDGEMENTS Page -------------------------------------------
     \newpage
-    \thispagestyle{empty}
     \begin{center}
         {\LARGE \textbf{กิตติกรรมประกาศ} }
     \end{center} \vskip2em
@@ -316,7 +314,6 @@
     % Do NOT EDIT this page
     \newpage
     \thispagestyle{empty}
-    \addcontentsline{toc}{chapter}{หน้าอนุมัติรายงาน}
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
             \textbf{ชื่อรายงานการปฏิบัติงานสหกิจศึกษา} & \ThesisTiTle \\
