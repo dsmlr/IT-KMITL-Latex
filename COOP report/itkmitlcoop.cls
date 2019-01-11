@@ -260,7 +260,6 @@
     %-- หนังสือส่งรายงานการปฏิบัติงานสหกิจศึกษา -------------------------------------------
     \newpage
     \thispagestyle{empty}
-    \addcontentsline{toc}{chapter}{จดหมายนำส่งรายงาน}
     \begin{flushright}
         วันที่ \SubD
     \end{flushright}
@@ -293,7 +292,6 @@
     \begin{center}
         {\LARGE \textbf{กิตติกรรมประกาศ} }
     \end{center} \vskip2em
-    \addcontentsline{toc}{chapter}{กิตติกรรมประกาศ}
     
     ตามที่ข้าพเจ้า \AuName \ ได้มาปฏิบัติงานสหกิจศึกษา ณ \Company \ ตั้งแต่วันที่ \StartDWork \ ถึงวันที่ \EndDWork \ ทำให้ข้าพเจ้าได้รับความรู้และประสบการณ์ต่าง ๆ ที่มีคุณค่ามากมาย สำหรับรายงานสหกิจศึกษาฉบับนี้สำเร็จลงได้ด้วยดี จากความช่วยเหลือและความร่วมมือสนับสนุนของหลายฝ่าย ดังนี้ 
     
@@ -316,7 +314,6 @@
     % Do NOT EDIT this page
     \newpage
     \thispagestyle{empty}
-    \addcontentsline{toc}{chapter}{หน้าอนุมัติรายงาน}
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
             \textbf{ชื่อรายงานการปฏิบัติงานสหกิจศึกษา} & \ThesisTiTle \\
