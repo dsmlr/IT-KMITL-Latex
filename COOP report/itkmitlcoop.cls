@@ -288,10 +288,10 @@
 \newcommand{\makeack}[1]{
     %-- ACKNOWLEDGEMENTS Page -------------------------------------------
     \newpage
-    \thispagestyle{empty}
     \begin{center}
         {\LARGE \textbf{กิตติกรรมประกาศ} }
     \end{center} \vskip2em
+    \addcontentsline{toc}{chapter}{กิตติกรรมประกาศ}
     
     ตามที่ข้าพเจ้า \AuName \ ได้มาปฏิบัติงานสหกิจศึกษา ณ \Company \ ตั้งแต่วันที่ \StartDWork \ ถึงวันที่ \EndDWork \ ทำให้ข้าพเจ้าได้รับความรู้และประสบการณ์ต่าง ๆ ที่มีคุณค่ามากมาย สำหรับรายงานสหกิจศึกษาฉบับนี้สำเร็จลงได้ด้วยดี จากความช่วยเหลือและความร่วมมือสนับสนุนของหลายฝ่าย ดังนี้ 
     
