@@ -1,0 +1,124 @@
+\documentclass{itkmitlcoop}
+
+\usepackage{afterpage}
+\usepackage{graphicx,amsmath,latexsym,amssymb,amsthm}
+\usepackage{indentfirst}
+\usepackage{cite}
+\usepackage[final]{pdfpages}
+
+% ##### Set indent after new line on bibliography
+\def\bibindent{2.1em}
+\makeatletter
+\let\old@biblabel\@biblabel
+\def\@biblabel#1{\old@biblabel{#1}\kern\bibindent}
+\let\old@bibitem\bibitem
+\def\bibitem#1{\old@bibitem{#1}\leavevmode\kern-\bibindent}
+\makeatother
+
+\graphicspath{ {images/} }
+
+%Your thesis title (THAI)
+\newcommand{\ThesisTiTle}{ระบบตรวจหาข้อความบนภาพมังงะด้วยเทคนิค Stroke Width Transform}
+%Your thesis title (ENG)
+\newcommand{\ThesisTiTleENG}{DETECTING TEXT IN MANGA USING STROKE WIDTH TRANSFORM}
+\newcommand{\ThesisTiTleENGSnakecase}{Detecting Text in Manga Using Stroke Width Transform}
+%Your name
+\newcommand{\AuName}{บุญฤทธิ์ พิริย์โยธินกุล}
+%Your name ENG
+\newcommand{\AuNameENG}{BOONYARITH PIRIYOTHINKUL}
+\newcommand{\AuNameENGSnakecase}{Boonyarith Piriyothinkul}
+%Your student ID
+\newcommand{\SId}{58070077}
+%Your advisor
+\newcommand{\Advisor}{รองศาสตราจารย์ ดร. กิติ์สุชาต พสุภา}
+%Your advisor english
+\newcommand{\AdvisorEng}{Associate Professor Dr. Kitsuchart Pasupa}
+%Your advisor employee
+\newcommand{\Exami}{Professor Dr. Masanori Sugimoto}
+%สถานประกอบการ
+\newcommand{\Company}{มหาวิทยาลัยฮอกไกโด}
+%ภาคเรียนที่ (in normal letters)
+\newcommand{\Sem}{1}
+%ปีการศึกษา (in normal letters)
+\newcommand{\AcaY}{2561}
+%ปีการศึกษา (in normal letters)
+\newcommand{\AcaYAD}{2018}
+%วันส่งรายงาน
+\newcommand{\SubD}{10 พฤศจิกายน พ.ศ. 2561}
+%วันเริ่มทำงาน
+\newcommand{\StartDWork}{23 กรกฎาคม พ.ศ. 2561}
+%วันสุดท้ายของการทำงาน
+\newcommand{\EndDWork}{30 พฤศจิกายน พ.ศ. 2561}
+%ที่อยู่สถานประกอบการ
+\newcommand{\Address}{Hokkaido University Kita 8, Nishi 5, Kita-ku, \\ Sapporo, Hokkaido, 060-0808 Japan}
+%เว็บไซต์สถานประกอบการ
+\newcommand{\Website}{www.global.hokudai.ac.jp}
+%ตำแหน่งานที่ปฏิบัติ
+\newcommand{\Position}{ผู้ช่วยนักวิจัย}
+
+\begin{document}    
+    \frontmatter
+    \pagenumbering{Roman}
+    \lhead{}\rhead{}\chead{}\lfoot{}\cfoot{\thepage}\rfoot{}
+    
+    \makecover
+    \makeinnercover
+    \makeengcover
+    \makecopyrightcover
+    \makeletter
+    \makeack{
+        \begin{enumerate}
+            \item \Exami \quad ตำแหน่ง ศาสตราจารย์
+            \item Jiang Ye \quad ตำแหน่ง นักศึกษาปริญญาเอก ปี 2
+        \end{enumerate}
+    }
+    \makeapproveletter
+    
+    % Setting margin for page numbering on frontmatter
+    \newgeometry{top=1in, bottom=1in, left=1.5in, right=1in, includefoot}
+    
+    \makeabstract{
+        \textbf{การ์ตูนญี่ปุ่น} หรือที่รู้จักกันอย่างแพร่หลายว่า \textbf{มังงะ (Manga)} กลายเป็นหนึ่งในหัวข้อที่ถูกหยิบมาวิจัย ในงานวิจัยชิ้นนี้มุ่งเน้นไปที่ปัญหาการตรวจหาข้อความบนภาพวาดมังงะ เนื่องจากปัญหาการสร้างชุดข้อมูลภาพมังงะและข้อมูลประกอบ (Annotation) อย่างเช่นการระบุขอบเขตข้อความ ซึ่งต้องใช้แรงงานคนและกินเวลาอย่างมาก ดังนั้นการพัฒนาระบบอัตโนมัติที่จะสามารถเข้ามาช่วยในงานส่วนนี้ได้จึงเป็นสิ่งที่น่าสนใจเป็นอย่างมาก โดยเราได้นำเสนอวิธีการตรวจหาข้อความบนภาพมังงะแบบใหม่ด้วยการใช้ Stroke Width Transform (SWT) ร่วมกับการใช้ Support Vector Machine (SVM) อย่างไรก็ดีวิธี SWT โดยดั้งเดิมนั้นถูกพัฒนาขึ้นเพื่อ เพื่อการตรวจหาข้อความบนภาพถ่าย ทำให้ไม่สามารถประยุกต์ใช้กับภาพมังงะได้ เพราะความแตกต่างระหว่างลักษระวัตถุกับอักษรของข้อความในภาพวาดและภาพถ่ายนั้นคล้ายคลึงมากกันเกินไป ดังนั้นเพื่อให้สามารถใช้งานกับมังงะได้ เราจึงนำวิธีการตรวจหาข้อความด้วย SWT ดั้งเดิมมาปรับปรุงและพัฒนาขึ้นเป็นวิธีการใหม่ของเรา โดยเราได้ปรับปรุงกฎเกณฑ์ในการค้นหาวัตถุที่คล้ายคลึงอักษร (Letter Candidates) ซึ่งช่วยเพิ่มประสิทธิภาพในการตรวจจับอักษรได้ครบถ้วนมากขึ้น และใช้ SVM เพื่อคัดแยกวัตถุอื่น ๆ ออกจากอักษร ช่วยในการลด False Positive ของผลลัพธ์ ในท้ายที่สุดเรานำประสิทธิภาพวิธีการของเรามาเปรียบเทียบร่วมกับวิธีการดั้งเดิมและวิธีอื่น ๆ รวมถึงวิธีที่ใช้ Deep Learning เป็นส่วนประกอบ ในท้ายที่สุดประสิทธิภาพของวิธีการใหม่ของเรานั้นสามารถทำคะแนน F-measure ได้สูงสุดเทียบกับวิธีการอื่น ๆ ที่ 0.506
+    }
+
+    \makeengabstract{
+        The Japanese comic-book style known as manga is becoming a popular topic for researchers. This paper focuses on the problem of detecting text regions in manga pages. Because it is time-consuming and laborious to identify the text regions in images manually, an automatic approach is highly desirable. Here, we propose a new text-detection method for manga using a Stroke Width Transform (SWT) technique in conjunction with a Support Vector Machine (SVM). Conventional SWT-based text-detection techniques perform poorly with manga because both text and non-text objects have similar characteristics for strokes, lines, and shapes. To better suit manga, we propose modifying the rules for finding letter candidates, which improves the ability to capture text. An SVM is then used to classify image patches into letter and nonletter regions. We compared our proposed framework with a conventional framework and other text-detection methods including deep-learning techniques. In the results, our proposed method achieved the highest F-measure of 0.506.
+    }
+
+    \newpage
+    \addcontentsline{toc}{chapter}{สารบัญ}
+    \tableofcontents
+    
+    \newpage
+    \addcontentsline{toc}{chapter}{สารบัญตาราง}
+    \listoftables
+    
+    \newpage
+    \addcontentsline{toc}{chapter}{สารบัญรูป}
+    \listoffigures
+    
+    % Reset frontmatter page numbering margin, back to original margin from class file
+    \restoregeometry
+
+    \mainmatter
+    \lhead{}\rhead{\thepage}\chead{}\lfoot{}\cfoot{}\rfoot{}
+    
+    \include{chapter1}
+    \include{chapter2}
+    \include{chapter3}
+    \include{chapter4}
+    \include{chapter5}
+    
+    \clearpage
+    \addcontentsline{toc}{chapter}{บรรณานุกรม}
+    \bibliographystyle{IEEEtran}
+    \bibliography{reference}
+    
+    \newpage
+    sdfsd
+    
+
+    \startappendix
+    \include{appendix}
+    
+\end{document}
