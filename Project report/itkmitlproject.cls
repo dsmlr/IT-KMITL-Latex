@@ -197,9 +197,9 @@
     \begin{center}
         \LARGE{\textbf{\ThesisTiTle}} \\
         \LARGE{\textbf{\ThesisTiTleENG}} \vfill
-        \Large{\textbf{โดย}} \\[0.5cm]
-        \Large{\textbf{\AuName}}  \\
-        \Large{\textbf{รหัสประจำตัว \SId}} \null \vfill
+        \Large{\textbf{\AuName}} \\
+        \Large{\textbf{\AuNameENG}} \\
+        \Large{\textbf{\SId}} \null \vfill
         \large{\textbf{ปริญญานิพนธ์นี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรวิทยาศาสตรบัณฑิต \\
                 สาขาวิชาเทคโนโลยีสารสนเทศ คณะเทคโนโลยีสารสนเทศ \\
                 สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง \\
