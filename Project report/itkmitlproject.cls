@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{itkmitlproject}[2019/05/21]
 
-\LoadClass[12pt, a4paper, oneside]{book}
+\LoadClass[11pt, a4paper, oneside]{book}
 
 \RequirePackage[top=1in, bottom=1in, left=1.5in, right=1in]{geometry}
 \RequirePackage{fontspec}
@@ -25,8 +25,15 @@
 % ##### Font and Typing
 \XeTeXlinebreaklocale "th_TH" %สำหรับตัดคำ
 \XeTeXlinebreakskip = 0pt plus 1pt
-\setmainfont[Scale=1.3]{Angsana New}
 \linespread{1.3}
+\setmainfont{Kinnari}[
+	Path = fonts/,
+	UprightFont = Kinnari,
+	ItalicFont = *-Italic,
+	BoldFont = *-Bold,
+	BoldItalicFont = *-BoldItalic,
+	Extension = .otf
+]
 
 % ##### Set Chapter and Section Style
 \titleformat{\chapter}[display]
@@ -199,7 +206,7 @@
         \LARGE{\textbf{\ThesisTiTleENG}} \vfill
         \Large{\textbf{\AuName}} \\
         \Large{\textbf{\AuNameENG}} \\
-        \Large{\textbf{\SId}} \null \vfill
+        \Large{\textbf{\SId}} \vfill
         \large{\textbf{ปริญญานิพนธ์นี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรวิทยาศาสตรบัณฑิต \\
                 สาขาวิชาเทคโนโลยีสารสนเทศ คณะเทคโนโลยีสารสนเทศ \\
                 สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง \\
