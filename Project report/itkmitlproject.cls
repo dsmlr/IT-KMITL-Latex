@@ -297,8 +297,8 @@
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
             \textbf{ชื่อรายงาน} & \ThesisTitle \\
-            \textbf{ชื่อนักศึกษา} & \Author \\
-            \textbf{รหัสนักศึกษา} & \SId \\
+            \textbf{ชื่อนักศึกษา} & \Author, \AuthorTwo \\
+            \textbf{รหัสนักศึกษา} & \SId, \SIdTwo \\
             \textbf{สาขาวิชา} & เทคโนโลยีสารสนเทศ \\
             \textbf{อาจารย์ที่ปรึกษา} & \Advisor \\
             \textbf{ปีการศึกษา} & \AcaYAD
@@ -321,11 +321,11 @@
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
             \textbf{Project Title} & \ThesisTitleENG \\
-            \textbf{Name} & \AuthorENG \\
-            \textbf{Student ID} & \SId \\
+            \textbf{Name} & \AuthorENG, \AuthorTwoENG \\
+            \textbf{Student ID} & \SId, \SIdTwo \\
             \textbf{Department} & Information Technology \\
             \textbf{Advisor} & \AdvisorENG \\
-            \textbf{Year} & \AcaY
+            \textbf{Year} & \AcaYAD
         \end{tabularx}
     \end{table}    
     
