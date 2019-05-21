@@ -226,7 +226,9 @@
         \LARGE{\textbf{\ThesisTitleENG}} \vfill
         \Large{\textbf{โดย}} \\[0.5cm]
         \Large{\textbf{\Author}}  \\
-        \Large{\textbf{รหัสประจำตัว \SId}} \\[1.5cm]
+        \Large{\textbf{รหัสประจำตัว \SId}} \\[0.5cm]
+        \Large{\textbf{\AuthorTwo}} \\
+        \Large{\textbf{รหัสประจำตัว \SIdTwo}} \\[1.5cm]
         \Large{\textbf{อาจารย์ที่ปรึกษา}} \\
         \Large{\textbf{\Advisor}} \vfill
         \large{\textbf{ปริญญานิพนธ์นี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรวิทยาศาสตรบัณฑิต \\
