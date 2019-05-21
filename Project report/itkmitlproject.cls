@@ -195,18 +195,15 @@
     \thispagestyle{empty}
     
     \begin{center}
-        \Large{\textbf{รายงานการปฏิบัติงานสหกิจศึกษา}} \\
-        \LARGE{\textbf{เรื่อง}} \\
         \LARGE{\textbf{\ThesisTiTle}} \\
-        \LARGE{\textbf{\ThesisTiTleENG}} \vskip3cm
-        \Large{\textbf{ปฎิบัติงาน ณ \Company}} \vskip1cm
+        \LARGE{\textbf{\ThesisTiTleENG}} \vfill
         \Large{\textbf{โดย}} \vskip1cm
         \Large{\textbf{\AuName}}  \\
         \Large{\textbf{รหัสประจำตัว \SId}} \null \vfill
-        \large{\textbf{รายงานนี้เป็นส่วนหนึ่งของการศึกษารายวิชา สหกิจศึกษา \\
+        \large{\textbf{ปริญญานิพนธ์นี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรวิทยาศาสตรบัณฑิต \\
                 สาขาวิชาเทคโนโลยีสารสนเทศ คณะเทคโนโลยีสารสนเทศ \\
-                ภาคเรียนที่~\Sem \  ปีการศึกษา~\AcaY\\ 
-                สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง }}
+                สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง \\
+                ภาคเรียนที่~\Sem \  ปีการศึกษา~\AcaY }}
     \end{center}
 }
 
