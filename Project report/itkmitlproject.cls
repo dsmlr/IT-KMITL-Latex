@@ -197,7 +197,7 @@
     \begin{center}
         \LARGE{\textbf{\ThesisTiTle}} \\
         \LARGE{\textbf{\ThesisTiTleENG}} \vfill
-        \Large{\textbf{โดย}} \vskip1cm
+        \Large{\textbf{โดย}} \\[0.5cm]
         \Large{\textbf{\AuName}}  \\
         \Large{\textbf{รหัสประจำตัว \SId}} \null \vfill
         \large{\textbf{ปริญญานิพนธ์นี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรวิทยาศาสตรบัณฑิต \\
@@ -212,16 +212,17 @@
     \newpage
     \thispagestyle{empty}
     \begin{center}
-        \Large{\textbf{รายงานการปฏิบัติงานสหกิจศึกษา}} \\
         \LARGE{\textbf{\ThesisTiTle}} \\
-        \LARGE{\textbf{\ThesisTiTleENG}} \vskip4cm
-        \Large{\textbf{ปฎิบัติงาน ณ \Company}} \vskip1cm
-        \Large{\textbf{โดย}} \vskip1cm
+        \LARGE{\textbf{\ThesisTiTleENG}} \vfill
+        \Large{\textbf{โดย}} \\[0.5cm]
         \Large{\textbf{\AuName}}  \\
-        \Large{\textbf{รหัสประจำตัว \SId}} \null \vfill
-        \large{\textbf{ปฏิบัติงาน ณ \Company \\
-                \Address \\ 
-                Web site : \Website}}
+        \Large{\textbf{รหัสประจำตัว \SId}} \\[1.5cm]
+        \Large{\textbf{อาจารย์ที่ปรึกษา}} \\
+        \Large{\textbf{\Advisor}} \null \vfill
+        \large{\textbf{ปริญญานิพนธ์นี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรวิทยาศาสตรบัณฑิต \\
+                สาขาวิชาเทคโนโลยีสารสนเทศ คณะเทคโนโลยีสารสนเทศ \\
+                สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง \\
+                ภาคเรียนที่~\Sem \  ปีการศึกษา~\AcaY }}
     \end{center}
 }
 
