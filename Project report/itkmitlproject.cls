@@ -246,7 +246,8 @@
     \thispagestyle{empty}
     \begin{center}
         \LARGE{\textbf{\ThesisTitleENG}} \vfill
-        \Large{\textbf{\AuthorENG}} \vfill
+        \Large{\textbf{\AuthorENG}} \\[0.5cm]
+        \Large{\textbf{\AuthorTwoENG}} \vfill
         \large{\textbf{A PROJECT SUBMITTED IN PARTIAL FULFILLMENT \\
                 OF THE REQUIREMENT FOR THE DEGREE OF \\
                 BACHELOR OF SCIENCE PROGRAM IN INFORMATION TECHNOLOGY \\
