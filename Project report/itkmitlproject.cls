@@ -245,7 +245,7 @@
                 BACHELOR OF SCIENCE PROGRAM IN INFORMATION TECHNOLOGY \\
                 FACULTY OF INFORMATION TECNOLOGY \\
                 KING MONGKUT’S INSTITUTE OF TECHNOLOGY LADKRABANG \\
-                \Sem / \AcaYAD}}
+                \Sem /\AcaYAD}}
     \end{center}
 }
 
@@ -256,7 +256,7 @@
     \begin{large}
         \noindent\textbf{COPYRIGHT \AcaYAD \\
             FACULTY OF INFORMATION TECHNOLOGY \\
-            KING MONGKUT’S INSTITUTE OF ECHNOLOGY LADKRABANG}
+            KING MONGKUT’S INSTITUTE OF TECHNOLOGY LADKRABANG}
     \end{large}
 }
 
