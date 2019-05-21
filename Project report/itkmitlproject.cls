@@ -238,12 +238,11 @@
     \newpage
     \thispagestyle{empty}
     \begin{center}
-        \LARGE{\textbf{\ThesisTiTleENG}} \vskip7cm
-        \Large{\textbf{\AuNameENG}}  \null \vfill
-        \large{\textbf{A REPORT SUBMITTED IN PARTIAL FULFILLMENT OF \\
-                THE REQUIREMENT FOR COOPERATING EDUCATION PROGRAM \\
-                THE DEGREE OF BACHELOR OF SCIENCE PROGRAM IN \\
-                INFORMATION TECHNOLOGY \\
+        \LARGE{\textbf{\ThesisTiTleENG}} \vfill
+        \Large{\textbf{\AuNameENG}} \vfill
+        \large{\textbf{A PROJECT SUBMITTED IN PARTIAL FULFILLMENT \\
+                OF THE REQUIREMENT FOR THE DEGREE OF \\
+                BACHELOR OF SCIENCE PROGRAM IN INFORMATION TECHNOLOGY \\
                 FACULTY OF INFORMATION TECNOLOGY \\
                 KING MONGKUT’S INSTITUTE OF TECHNOLOGY LADKRABANG \\
                 \Sem / \AcaYAD}}
