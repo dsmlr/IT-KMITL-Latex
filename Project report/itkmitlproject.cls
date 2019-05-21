@@ -202,11 +202,14 @@
     \thispagestyle{empty}
     
     \begin{center}
-        \LARGE{\textbf{\ThesisTiTle}} \\
-        \LARGE{\textbf{\ThesisTiTleENG}} \vfill
-        \Large{\textbf{\AuName}} \\
-        \Large{\textbf{\AuNameENG}} \\
-        \Large{\textbf{\SId}} \vfill
+        \LARGE{\textbf{\ThesisTitle}} \\
+        \LARGE{\textbf{\ThesisTitleENG}} \vfill
+        \Large{\textbf{\Author}} \\
+        \Large{\textbf{\AuthorENG}} \\
+        \Large{\textbf{\SId}} \\[0.5cm]
+        	\Large{\textbf{\AuthorTwo}} \\
+        \Large{\textbf{\AuthorTwoENG}} \\
+        \Large{\textbf{\SIdTwo}} \vfill
         \large{\textbf{ปริญญานิพนธ์นี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรวิทยาศาสตรบัณฑิต \\
                 สาขาวิชาเทคโนโลยีสารสนเทศ คณะเทคโนโลยีสารสนเทศ \\
                 สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง \\
@@ -219,10 +222,10 @@
     \newpage
     \thispagestyle{empty}
     \begin{center}
-        \LARGE{\textbf{\ThesisTiTle}} \\
-        \LARGE{\textbf{\ThesisTiTleENG}} \vfill
+        \LARGE{\textbf{\ThesisTitle}} \\
+        \LARGE{\textbf{\ThesisTitleENG}} \vfill
         \Large{\textbf{โดย}} \\[0.5cm]
-        \Large{\textbf{\AuName}}  \\
+        \Large{\textbf{\Author}}  \\
         \Large{\textbf{รหัสประจำตัว \SId}} \\[1.5cm]
         \Large{\textbf{อาจารย์ที่ปรึกษา}} \\
         \Large{\textbf{\Advisor}} \vfill
@@ -238,8 +241,8 @@
     \newpage
     \thispagestyle{empty}
     \begin{center}
-        \LARGE{\textbf{\ThesisTiTleENG}} \vfill
-        \Large{\textbf{\AuNameENG}} \vfill
+        \LARGE{\textbf{\ThesisTitleENG}} \vfill
+        \Large{\textbf{\AuthorENG}} \vfill
         \large{\textbf{A PROJECT SUBMITTED IN PARTIAL FULFILLMENT \\
                 OF THE REQUIREMENT FOR THE DEGREE OF \\
                 BACHELOR OF SCIENCE PROGRAM IN INFORMATION TECHNOLOGY \\
@@ -273,7 +276,7 @@
     \vskip1.5cm
     \begin{flushright}    
         \begin{tabular}{c}
-            \AuName \\
+            \Author \\
             ผู้จัดทำรายงาน \\
             วันที่ \SubD
         \end{tabular}
@@ -287,8 +290,8 @@
     \thispagestyle{empty}
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
-            \textbf{ชื่อรายงานการปฏิบัติงานสหกิจศึกษา} & \ThesisTiTle \\
-            \textbf{ผู้รายงาน} & \AuName \\
+            \textbf{ชื่อรายงานการปฏิบัติงานสหกิจศึกษา} & \ThesisTitle \\
+            \textbf{ผู้รายงาน} & \Author \\
             \textbf{คณะ} & เทคโนโลยีสารสนเทศ \\
             \textbf{สาขาวิชา} & เทคโนโลยีสารสนเทศ
         \end{tabularx}
@@ -319,8 +322,8 @@
     
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
-            \textbf{ชื่อรายงาน} & \ThesisTiTle \\
-            \textbf{ชื่อนักศึกษา} & \AuName \\
+            \textbf{ชื่อรายงาน} & \ThesisTitle \\
+            \textbf{ชื่อนักศึกษา} & \Author \\
             \textbf{รหัสนักศึกษา} & \SId \\
             \textbf{สาขาวิชา} & เทคโนโลยีสารสนเทศ \\
             \textbf{อาจารย์ที่ปรึกษา} & \Advisor \\
@@ -343,8 +346,8 @@
     
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
-            \textbf{Project Title} & \ThesisTiTleENG \\
-            \textbf{Name} & \AuNameENG \\
+            \textbf{Project Title} & \ThesisTitleENG \\
+            \textbf{Name} & \AuthorENG \\
             \textbf{Student ID} & \SId \\
             \textbf{Department} & Information Technology \\
             \textbf{Advisor} & \AdvisorENG \\
