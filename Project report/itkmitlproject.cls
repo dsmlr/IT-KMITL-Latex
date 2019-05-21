@@ -162,7 +162,7 @@
 
 \titlecontents{table}[0mm]{\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listftablename}}{\contentspush{\tablename\hspace{1ex}\thecontentslabel\hspace{2mm}}}{}{\hfill \contentspage}
 
-% ##### LOF Overrided 
+% ##### LOF Overridden 
 \newcommand{\lofheadcont}[3]{
     \ifthenelse{#1>29 \OR #2>29}{
         %Should be a newpage here.
@@ -243,7 +243,7 @@
         \large{\textbf{A PROJECT SUBMITTED IN PARTIAL FULFILLMENT \\
                 OF THE REQUIREMENT FOR THE DEGREE OF \\
                 BACHELOR OF SCIENCE PROGRAM IN INFORMATION TECHNOLOGY \\
-                FACULTY OF INFORMATION TECNOLOGY \\
+                FACULTY OF INFORMATION TECHNOLOGY \\
                 KING MONGKUT’S INSTITUTE OF TECHNOLOGY LADKRABANG \\
                 \Sem /\AcaYAD}}
     \end{center}
