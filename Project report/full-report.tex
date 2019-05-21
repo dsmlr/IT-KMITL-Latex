@@ -1,0 +1,109 @@
+\documentclass{itkmitlproject}
+
+\usepackage{afterpage}
+\usepackage{graphicx,amsmath,latexsym,amssymb,amsthm}
+\usepackage{indentfirst}
+\usepackage{cite}
+
+\graphicspath{ {images/} }
+
+\makeatletter
+% \patchcmd{<cmd>}{<search>}{<replace>}{<succes>}{<failure>}
+\patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
+\patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
+\makeatother
+
+%1. Your thesis title (THAI)
+\newcommand{\ThesisTiTle}{ชื่อโปรเจ็กต์จบ}
+%2. Your thesis title (ENG)
+\newcommand{\ThesisTiTleENG}{Project name (English)}
+%3. Your name
+\newcommand{\AuName}{ชื่อ นามสกุล}
+%4. Your name ENG
+\newcommand{\AuNameENG}{Name Surname}
+%5. Your student ID
+\newcommand{\SId}{รหัสประจำตัว}
+%6. Your advisor
+\newcommand{\Advisor}{ชื่อที่ปรึกษา}
+%7. Your advisor employee
+\newcommand{\Exami}{ชื่อพนักงานที่ปรึกษา}
+%8. สถานประกอบการ
+\newcommand{\Company}{ชื่อบริษัท}
+%9. ภาคเรียนที่ (in normal letters)
+\newcommand{\Sem}{1}
+%10. ปีการศึกษา (in normal letters)
+\newcommand{\AcaY}{2561}
+%11. ปีการศึกษา (in normal letters)
+\newcommand{\AcaYAD}{2018}
+%12. วันส่งรายงาน
+\newcommand{\SubD}{10 พฤศจิกายน พ.ศ. 2561}
+%13. วันเริ่มทำงาน
+\newcommand{\StartDWork}{23 กรกฎาคม พ.ศ. 2561}
+%14. วันสุดท้ายของการทำงาน
+\newcommand{\EndDWork}{30 พฤศจิกายน พ.ศ. 2561}
+%15. ที่อยู่สถานประกอบการ
+\newcommand{\Address}{ที่อยู่}
+%16. เว็บไซต์สถานประกอบการ
+\newcommand{\Website}{เว็บไซต์}
+%17. ตำแหน่งานที่ปฏิบัติ
+\newcommand{\Position}{ตำแหน่งงานที่ปฏิบัติ}
+
+\begin{document}    
+    \frontmatter
+    \lhead{}\rhead{}\chead{}\lfoot{}\cfoot{\thepage}\rfoot{}
+    \makecover    
+    \makeinnercover
+    \makeengcover
+    \makecopyrightcover
+    \makeletter
+    \makeack{
+        \begin{enumerate}
+            \item คุณ ชื่อ สกุล \quad ตำแหน่ง xxxxxxx
+        \end{enumerate}
+    }
+    \makeapproveletter
+   
+    % Setting margin for page numbering on frontmatter
+    \newgeometry{top=1in, bottom=1in, left=1.5in, right=1in, includefoot}
+    
+    \makeabstract{
+    	บทคัดย่อ
+    }
+
+%    \makeabstracteng{
+%        Abstract eng
+%    }
+
+    \newpage
+    \addcontentsline{toc}{chapter}{สารบัญ}
+    \tableofcontents
+    
+    \newpage
+    \addcontentsline{toc}{chapter}{สารบัญตาราง}
+    \listoftables    
+    
+    \newpage
+    \addcontentsline{toc}{chapter}{สารบัญภาพ}
+    \listoffigures
+    
+    % Reset frontmatter page numbering margin, back to original margin from class file
+    \restoregeometry
+
+    \mainmatter
+    \lhead{}\rhead{\thepage}\chead{}\lfoot{}\cfoot{}\rfoot{}
+    
+    \include{chapter1}
+    \include{chapter2}
+    \include{chapter3}
+    \include{chapter4}
+    \include{chapter5}
+    
+    \clearpage
+    \addcontentsline{toc}{chapter}{บรรณานุกรม}
+    \bibliographystyle{IEEEtran}
+    \bibliography{reference}
+    
+    \startappendix
+    \include{appendix}
+    
+\end{document}
