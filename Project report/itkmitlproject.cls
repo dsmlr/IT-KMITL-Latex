@@ -207,6 +207,7 @@
         \Large{\textbf{\Author}} \\
         \Large{\textbf{\AuthorENG}} \\
         \Large{\textbf{\SId}} \\[0.5cm]
+        	% TODO Hide when AuthorTwo is empty
         	\Large{\textbf{\AuthorTwo}} \\
         \Large{\textbf{\AuthorTwoENG}} \\
         \Large{\textbf{\SIdTwo}} \vfill
@@ -227,8 +228,8 @@
         \Large{\textbf{โดย}} \\[0.5cm]
         \Large{\textbf{\Author}}  \\
         \Large{\textbf{รหัสประจำตัว \SId}} \\[0.5cm]
-        \Large{\textbf{\AuthorTwo}} \\
-        \Large{\textbf{รหัสประจำตัว \SIdTwo}} \\[1.5cm]
+        %\Large{\textbf{\AuthorTwo}} \\
+        %\Large{\textbf{รหัสประจำตัว \SIdTwo}} \\[1.5cm]
         \Large{\textbf{อาจารย์ที่ปรึกษา}} \\
         \Large{\textbf{\Advisor}} \vfill
         \large{\textbf{ปริญญานิพนธ์นี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรวิทยาศาสตรบัณฑิต \\
