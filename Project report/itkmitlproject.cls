@@ -340,6 +340,30 @@
     #1
 }
 
+\newcommand{\makethesiscert}[1]{
+	%-- Thesis Certificate Page --------------------------------
+	\newpage
+	\thispagestyle{empty}
+
+	\begin{center}
+		\LARGE{\textbf{ใบรับรองปริญญานิพนธ์ ประจำปีการศึกษา \AcaY}}
+
+		\LARGE{\textbf{คณะเทคโนโลยีสารสนเทศ}}
+
+		\LARGE{\textbf{สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง}}
+	\end{center}
+
+	\null
+
+	\begin{Large}
+		\noindent
+		\begin{tabular}{l l}
+			\textbf{เรื่อง} & \textbf{\ThesisTitle} \\
+			\null & \textbf{\MakeUppercase{\ThesisTitleENG}}
+		\end{tabular}
+	\end{Large}
+}
+
 \newcommand\startappendix{
     \appendix
     \renewcommand*{\appendixname}{ภาคผนวก}
