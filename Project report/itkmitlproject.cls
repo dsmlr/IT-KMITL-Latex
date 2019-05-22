@@ -340,7 +340,7 @@
     #1
 }
 
-\newcommand{\makethesiscert}[1]{
+\newcommand{\makethesiscert}[0]{
 	%-- Thesis Certificate Page --------------------------------
 	% This part is not finished
 	\newpage
@@ -354,7 +354,7 @@
 		\LARGE{\textbf{สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง}}
 	\end{center}
 
-	\null
+	\vskip1cm
 
 	\begin{Large}
 		\noindent
@@ -364,6 +364,8 @@
 		\end{tabular}
 	\end{Large}
 
+	\vfill
+
 	\begin{Large}
 		\noindent
 		\begin{tabular}{l l}
@@ -372,6 +374,16 @@
 			\null & \textbf{2. \AuthorTwo \ รหัสประจำตัว \SIdTwo}
 		\end{tabular}
 	\end{Large}
+
+	\vfill
+
+	\begin{flushright}    
+        \begin{tabular}{c l}
+            \large{\textbf{\Advisor}} & \large{\textbf{อาจารย์ที่ปรึกษา}} \\
+            \null \\
+            \large{\textbf{(...........................................)}} & \null
+        \end{tabular}
+    \end{flushright}
 }
 
 \newcommand\startappendix{
