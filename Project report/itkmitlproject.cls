@@ -18,6 +18,7 @@
 \RequirePackage{afterpage}
 \RequirePackage{subfigure}
 \RequirePackage{etoolbox}
+\RequirePackage{array}
 
 % ##### new command for Roman number
 \newcommand{\rNum}[1]{\lowercase\expandafter{\romannumeral #1\relax}}
@@ -357,7 +358,7 @@
 
 	\begin{Large}
 		\noindent
-		\begin{tabular}{p{1.5cm} l}
+		\begin{tabular}{p{1.5cm} >{\raggedright\arraybackslash}p{12.4cm}}
 			\textbf{เรื่อง} & \textbf{\ThesisTitle} \\
 			\null & \textbf{\MakeUppercase{\ThesisTitleENG}}
 		\end{tabular}
