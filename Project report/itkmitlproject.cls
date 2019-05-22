@@ -340,9 +340,8 @@
     #1
 }
 
-\newcommand{\makethesiscert}[0]{
+\newcommand\makethesiscert{
 	%-- Thesis Certificate Page --------------------------------
-	% This part is not finished
 	\newpage
 	\thispagestyle{empty}
 
@@ -382,6 +381,46 @@
             \large{\textbf{\Advisor}} & \large{\textbf{อาจารย์ที่ปรึกษา}} \\
             \null \\
             \large{\textbf{(...........................................)}} & \null
+        \end{tabular}
+    \end{flushright}
+}
+
+\newcommand\makeprojectcert{
+	%-- Project Certificate Page -------------------------------
+	\newpage
+	\thispagestyle{empty}
+
+	\begin{center}
+		\begin{bfseries}
+			\large{ใบรับรองโครงงาน (PROJECT)}
+
+			\vfill
+
+			\large{เรื่อง \\ \ThesisTitle \\ \ThesisTitleENG}
+
+			\vfill
+
+			\large{\Author \ รหัสประจำตัว \SId} \\
+			\large{\AuthorTwo \ รหัสประจำตัว \SIdTwo}
+		\end{bfseries}
+
+		\vfill
+
+		ขอรับรองว่ารายงานฉบับนี้ ข้าพเจ้าไม่ได้คัดลอกมาจากที่ใด \\
+		รายงานฉบับนี้ได้รับการตรวจสอบและอนุมัติให้เป็นส่วนหนึ่งของ \\
+		การศึกษาวิชาโครงงาน หลักสูตรวิทยาศาสตรบัณฑิต (เทคโนโลยีสารสนเทศ) \\
+		ภาคเรียนที่ \Sem \ ปีการศึกษา \AcaY
+	\end{center}
+
+	\vfill
+
+	\begin{flushright}    
+        \begin{tabular}{c}
+            ........................................... \\
+            \Author \\
+            \null \\
+            ........................................... \\
+            \AuthorTwo
         \end{tabular}
     \end{flushright}
 }
