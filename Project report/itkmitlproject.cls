@@ -342,6 +342,7 @@
 
 \newcommand{\makethesiscert}[1]{
 	%-- Thesis Certificate Page --------------------------------
+	% This part is not finished
 	\newpage
 	\thispagestyle{empty}
 
@@ -357,9 +358,18 @@
 
 	\begin{Large}
 		\noindent
-		\begin{tabular}{l l}
+		\begin{tabular}{p{1.5cm} l}
 			\textbf{เรื่อง} & \textbf{\ThesisTitle} \\
 			\null & \textbf{\MakeUppercase{\ThesisTitleENG}}
+		\end{tabular}
+	\end{Large}
+
+	\begin{Large}
+		\noindent
+		\begin{tabular}{l l}
+			\textbf{ผู้จัดทำ} & \null \\
+			\null & \textbf{1. \Author \ รหัสประจำตัว \SId} \\
+			\null & \textbf{2. \AuthorTwo \ รหัสประจำตัว \SIdTwo}
 		\end{tabular}
 	\end{Large}
 }
