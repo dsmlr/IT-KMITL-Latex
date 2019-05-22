@@ -284,6 +284,7 @@
     \begin{flushright}    
         \begin{tabular}{c}
             \Author \\
+            \AuthorTwo \\
             ผู้จัดทำรายงาน \\
             วันที่ \SubD
         \end{tabular}
@@ -303,7 +304,7 @@
             \textbf{รหัสนักศึกษา} & \SId, \SIdTwo \\
             \textbf{สาขาวิชา} & เทคโนโลยีสารสนเทศ \\
             \textbf{อาจารย์ที่ปรึกษา} & \Advisor \\
-            \textbf{ปีการศึกษา} & \AcaYAD
+            \textbf{ปีการศึกษา} & \AcaY
         \end{tabularx}
     \end{table}
     
