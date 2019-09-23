@@ -271,7 +271,7 @@
     \end{large}
 }
 
-\newcommand{\makeack}[1]{
+\newcommand{\makeack}{
     %-- ACKNOWLEDGEMENTS Page -------------------------------------------
     \newpage
     \begin{center}
