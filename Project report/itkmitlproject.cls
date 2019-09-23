@@ -311,7 +311,7 @@
     
     \vskip1cm
     \begin{center}
-        \textbf{\large บทคัดย่อ}
+        \textbf{\LARGE บทคัดย่อ}
     \end{center}
     
     #1
@@ -335,7 +335,7 @@
     
     \vskip1cm
     \begin{center}
-        \textbf{\large Abstract}
+        \textbf{\LARGE Abstract}
     \end{center}
     
     #1
