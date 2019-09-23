@@ -18,6 +18,7 @@
 \RequirePackage{afterpage}
 \RequirePackage{subfigure}
 \RequirePackage{etoolbox}
+\RequirePackage{array}
 
 % ##### new command for Roman number
 \newcommand{\rNum}[1]{\lowercase\expandafter{\romannumeral #1\relax}}
@@ -270,7 +271,7 @@
     \end{large}
 }
 
-\newcommand{\makeack}[1]{
+\newcommand{\makeack}{
     %-- ACKNOWLEDGEMENTS Page -------------------------------------------
     \newpage
     \begin{center}
@@ -278,12 +279,13 @@
     \end{center} \vskip2em
     \addcontentsline{toc}{chapter}{กิตติกรรมประกาศ}
     
-    แก้ไขกิตติกรรมประกาศในไฟล์ itkmitlproject.cls
+   \input{acknowledgement}
     
     \vskip1.5cm
     \begin{flushright}    
         \begin{tabular}{c}
             \Author \\
+            \AuthorTwo \\
             ผู้จัดทำรายงาน \\
             วันที่ \SubD
         \end{tabular}
@@ -303,7 +305,7 @@
             \textbf{รหัสนักศึกษา} & \SId, \SIdTwo \\
             \textbf{สาขาวิชา} & เทคโนโลยีสารสนเทศ \\
             \textbf{อาจารย์ที่ปรึกษา} & \Advisor \\
-            \textbf{ปีการศึกษา} & \AcaYAD
+            \textbf{ปีการศึกษา} & \AcaY
         \end{tabularx}
     \end{table}
     
@@ -337,6 +339,91 @@
     \end{center}
     
     #1
+}
+
+\newcommand\makethesiscert{
+	%-- Thesis Certificate Page --------------------------------
+	\newpage
+	\thispagestyle{empty}
+
+	\begin{center}
+		\LARGE{\textbf{ใบรับรองปริญญานิพนธ์ ประจำปีการศึกษา \AcaY}}
+
+		\LARGE{\textbf{คณะเทคโนโลยีสารสนเทศ}}
+
+		\LARGE{\textbf{สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง}}
+	\end{center}
+
+	\vskip1cm
+
+	\begin{Large}
+		\noindent
+		\begin{tabular}{p{1.5cm} >{\raggedright\arraybackslash}p{12.4cm}}
+			\textbf{เรื่อง} & \textbf{\ThesisTitle} \\
+			\null & \textbf{\MakeUppercase{\ThesisTitleENG}}
+		\end{tabular}
+	\end{Large}
+
+	\vfill
+
+	\begin{Large}
+		\noindent
+		\begin{tabular}{l l}
+			\textbf{ผู้จัดทำ} & \null \\
+			\null & \textbf{1. \Author \ รหัสประจำตัว \SId} \\
+			\null & \textbf{2. \AuthorTwo \ รหัสประจำตัว \SIdTwo}
+		\end{tabular}
+	\end{Large}
+
+	\vfill
+
+	\begin{flushright}    
+        \begin{tabular}{c l}
+            \large{\textbf{\Advisor}} & \large{\textbf{อาจารย์ที่ปรึกษา}} \\
+            \null \\
+            \large{\textbf{(...........................................)}} & \null
+        \end{tabular}
+    \end{flushright}
+}
+
+\newcommand\makeprojectcert{
+	%-- Project Certificate Page -------------------------------
+	\newpage
+	\thispagestyle{empty}
+
+	\begin{center}
+		\begin{bfseries}
+			\large{ใบรับรองโครงงาน (PROJECT)}
+
+			\vfill
+
+			\large{เรื่อง \\ \ThesisTitle \\ \ThesisTitleENG}
+
+			\vfill
+
+			\large{\Author \ รหัสประจำตัว \SId} \\
+			\large{\AuthorTwo \ รหัสประจำตัว \SIdTwo}
+		\end{bfseries}
+
+		\vfill
+
+		ขอรับรองว่ารายงานฉบับนี้ ข้าพเจ้าไม่ได้คัดลอกมาจากที่ใด \\
+		รายงานฉบับนี้ได้รับการตรวจสอบและอนุมัติให้เป็นส่วนหนึ่งของ \\
+		การศึกษาวิชาโครงงาน หลักสูตรวิทยาศาสตรบัณฑิต (เทคโนโลยีสารสนเทศ) \\
+		ภาคเรียนที่ \Sem \ ปีการศึกษา \AcaY
+	\end{center}
+
+	\vfill
+
+	\begin{flushright}    
+        \begin{tabular}{c}
+            ........................................... \\
+            \Author \\
+            \null \\
+            ........................................... \\
+            \AuthorTwo
+        \end{tabular}
+    \end{flushright}
 }
 
 \newcommand\startappendix{
