@@ -279,7 +279,7 @@
     \end{center} \vskip2em
     \addcontentsline{toc}{chapter}{กิตติกรรมประกาศ}
     
-    แก้ไขกิตติกรรมประกาศในไฟล์ itkmitlproject.cls
+   \input{acknowledgement}
     
     \vskip1.5cm
     \begin{flushright}    
