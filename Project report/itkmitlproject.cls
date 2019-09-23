@@ -393,16 +393,16 @@
 
 	\begin{center}
 		\begin{bfseries}
-			\large{ใบรับรองโครงงาน (PROJECT)}
+			\Large{ใบรับรองโครงงาน (PROJECT)}
 
 			\vfill
 
-			\large{เรื่อง \\ \ThesisTitle \\ \ThesisTitleENG}
+			\Large{เรื่อง \\ \ThesisTitle \\ \ThesisTitleENG}
 
 			\vfill
 
-			\large{\Author \ รหัสประจำตัว \SId} \\
-			\large{\AuthorTwo \ รหัสประจำตัว \SIdTwo}
+			\Large{\Author \ รหัสประจำตัว \SId} \\
+			\Large{\AuthorTwo \ รหัสประจำตัว \SIdTwo}
 		\end{bfseries}
 
 		\vfill
