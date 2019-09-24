@@ -4,6 +4,7 @@
 \LoadClass[11pt, a4paper, oneside]{book}
 
 \RequirePackage[top=1in, bottom=1in, left=1.5in, right=1in]{geometry}
+\RequirePackage[labelfont=bf]{caption}
 \RequirePackage{fontspec}
 \RequirePackage{xunicode}
 \RequirePackage{xltxtra}
