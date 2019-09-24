@@ -21,6 +21,9 @@
 \RequirePackage{etoolbox}
 \RequirePackage{array}
 
+% ##### Set caption label to be left-aligned
+\captionsetup[table]{justification=raggedright, singlelinecheck=off}
+
 % ##### new command for Roman number
 \newcommand{\rNum}[1]{\lowercase\expandafter{\romannumeral #1\relax}}
 
