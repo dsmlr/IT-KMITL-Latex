@@ -37,7 +37,8 @@
 	ItalicFont = *-Italic,
 	BoldFont = *-Bold,
 	BoldItalicFont = *-BoldItalic,
-	Extension = .otf
+	Extension = .otf,
+	Script=Thai
 ]
 
 % ##### Set Chapter and Section Style
