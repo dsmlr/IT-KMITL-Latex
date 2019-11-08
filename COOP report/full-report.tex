@@ -13,39 +13,41 @@
 \patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
 \makeatother
 
-%1. Your thesis title (THAI)
+% Your thesis title (THAI)
 \newcommand{\ThesisTiTle}{ชื่อโปรเจ็กต์จบ}
-%2. Your thesis title (ENG)
-\newcommand{\ThesisTiTleENG}{Project name (English)}
-%3. Your name
+% Your thesis title (ENG)
+\newcommand{\ThesisTiTleENG}{Project name}
+% Your name
 \newcommand{\AuName}{ชื่อ นามสกุล}
-%4. Your name ENG
+% Your name ENG
 \newcommand{\AuNameENG}{Name Surname}
-%5. Your student ID
-\newcommand{\SId}{รหัสประจำตัว}
-%6. Your advisor
+% Department / Program
+\newcommand{\DepartmentENG}{Information Technology}
+% Your student ID
+\newcommand{\SId}{xx07xxxx}
+% Your advisor
 \newcommand{\Advisor}{ชื่อที่ปรึกษา}
-%7. Your advisor employee
+% Your advisor employee
 \newcommand{\Exami}{ชื่อพนักงานที่ปรึกษา}
-%8. สถานประกอบการ
+% ชื่อสถานประกอบการ
 \newcommand{\Company}{ชื่อบริษัท}
-%9. ภาคเรียนที่ (in normal letters)
+% ภาคเรียนที่ (in normal letters)
 \newcommand{\Sem}{1}
-%10. ปีการศึกษา (in normal letters)
+% ปีการศึกษา (in normal letters)
 \newcommand{\AcaY}{2561}
-%11. ปีการศึกษา (in normal letters)
+% ปีการศึกษา (in normal letters)
 \newcommand{\AcaYAD}{2018}
-%12. วันส่งรายงาน
+% วันส่งรายงาน
 \newcommand{\SubD}{10 พฤศจิกายน พ.ศ. 2561}
-%13. วันเริ่มทำงาน
+% วันเริ่มทำงาน
 \newcommand{\StartDWork}{23 กรกฎาคม พ.ศ. 2561}
-%14. วันสุดท้ายของการทำงาน
+% วันสุดท้ายของการทำงาน
 \newcommand{\EndDWork}{30 พฤศจิกายน พ.ศ. 2561}
-%15. ที่อยู่สถานประกอบการ
+% ที่อยู่สถานประกอบการ
 \newcommand{\Address}{ที่อยู่}
-%16. เว็บไซต์สถานประกอบการ
-\newcommand{\Website}{เว็บไซต์}
-%17. ตำแหน่งานที่ปฏิบัติ
+% เว็บไซต์สถานประกอบการ
+\newcommand{\Website}{https://example.com}
+% ตำแหน่งานที่ปฏิบัติ
 \newcommand{\Position}{ตำแหน่งงานที่ปฏิบัติ}
 
 \begin{document}    
@@ -58,6 +60,7 @@
     \makeletter
     \makeack{
         \begin{enumerate}
+            \item คุณ ชื่อ สกุล \quad ตำแหน่ง xxxxxxx (พนักงานที่ปรึกษา)
             \item คุณ ชื่อ สกุล \quad ตำแหน่ง xxxxxxx
         \end{enumerate}
     }
@@ -70,9 +73,9 @@
     	บทคัดย่อ
     }
 
-%    \makeabstracteng{
-%        Abstract eng
-%    }
+   \makeabstracteng{
+       Abstract
+   }
 
     \newpage
     \addcontentsline{toc}{chapter}{สารบัญ}

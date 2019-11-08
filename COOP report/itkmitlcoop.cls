@@ -372,11 +372,11 @@
     
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
-            \textbf{Project Title} & \ThesisTiTleEng \\
-            \textbf{Name} & \AuNameEng \\
+            \textbf{Project Title} & \ThesisTiTleENG \\
+            \textbf{Name} & \AuNameENG \\
             \textbf{Student ID} & \SId \\
-            \textbf{Department} & \DepartmentEng \\
-            \textbf{Advisor} & \AdvisorEng \\
+            \textbf{Department} & \DepartmentENG \\
+            \textbf{Advisor} & \AdvisorENG \\
             \textbf{Year} & \AcaY
         \end{tabularx}
     \end{table}    
