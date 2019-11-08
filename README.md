@@ -1,16 +1,17 @@
-# ITKMITL Latex Report Template for Co-operative Studies & Thesis
+# ITKMITL Latex Template for Co-operative Studies & Thesis Report
 
-The Latex class for creating your own thesis or cooperative studies report<br>
-เทมเพลทคลาสเลเท็กซ์ถูกสร้างขึ้นสำหรับการจัดทำรูปเล่มรายงานสหกิจฯ และวิทยานิพนธ์
+The Latex class for creating your own thesis or cooperative studies report for 4th year Undergraduate student<br>
+เทมเพลทคลาสเลเท็กซ์สำหรับการจัดทำรูปเล่มรายงานสหกิจฯ และวิทยานิพนธ์สำหรับนักศึกษาปีที่ 4
 
-> If you liked to contribute to this project, you may fork and create a pull request to this repository, for the future generations of undergraduate students. <br>หากท่านอยากที่จะมีส่วนช่วยในโปรเจ็กต์นี้ ก็สามารถ fork โปรเจ็กต์นี้ และสร้าง pull request กลับมาเพื่อเป็นประโยชน์แก่นักศึกษารุ่นต่อ ๆ ไปครับ
+If you liked to contribute to this project, you may fork and create a pull request to this repository, for the future generations of undergraduate students.<br>
+หากท่านอยากที่จะมีส่วนช่วยในโปรเจ็กต์นี้ ก็สามารถ fork โปรเจ็กต์นี้ และสร้าง pull request กลับมาเพื่อเป็นประโยชน์แก่นักศึกษารุ่นต่อ ๆ ไปครับ
 
 ## Build tools
 
 To create a report, choose `xelatex` as Latex builder.<br>
 เพื่อสร้างรายงาน ให้ท่านเลือกตัว build `xelatex` เพื่อสร้างไฟล์รายงาน
 
-> `xelatex` is automatically downloaded after you install Miktex<br> > `xelatex` จะถูกสร้างขึ้นอย่างอัตโนมัติหลังจากท่านติดตั้ง Miktex แล้ว
+> `xelatex` will be automatically available after installation of Miktex<br> > `xelatex` จะพร้อมใช้งานอย่างอัตโนมัติหลังจากท่านติดตั้ง Miktex แล้ว
 
 Then try off by using<br>
 และใช้คำสั่งดังนี้เพื่อสร้างรายงาน
