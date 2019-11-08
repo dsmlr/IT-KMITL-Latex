@@ -32,6 +32,8 @@ xelatex COOP\ Report/full-report.tex
 - `example.pdf` ไฟล์ตัวอย่างเล่มที่สร้างจาก `itkmitlcoop.cls`
 - `full-report.pdf` ไฟล์ output หลังจากการ compile
 
+สำหรับเทมเพลท Thesis ในขณะนี้ยังไม่ได้ถูกพัฒนาขึ้น แต่หากท่านอยากที่จะช่วยสนับสนุนในด้านการทำเทมเพลท ท่านสามารถทำการ fork โปรเจ็กต์นี้ และสร้าง pull request เพือเป็นประโยชน์ต่อนักศึกษาในรุ่นต่อ ๆ ไป
+
 ## License
 
 This project is licensed as MIT License. Please checkout [LICENSE.md](https://github.com/dsmlr/IT-KMITL-Latex/blob/master/LICENSE) for more detail.<br>
