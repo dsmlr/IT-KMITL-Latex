@@ -431,6 +431,18 @@
     \end{flushright}
 }
 
+\newcommand\makeauthorbio{
+	%-- Author Biography Page -------------------------------
+	\newpage
+
+	\begin{center}
+    		{\LARGE \textbf{ประวัติผู้เขียน} }
+	\end{center} \vskip2em
+	\addcontentsline{toc}{chapter}{ประวัติผู้เขียน}
+
+	\input{author-bio}
+}
+
 \newcommand\startappendix{
     \appendix
     \renewcommand*{\appendixname}{ภาคผนวก}
