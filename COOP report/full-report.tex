@@ -48,62 +48,62 @@
 %17. ตำแหน่งานที่ปฏิบัติ
 \newcommand{\Position}{ตำแหน่งงานที่ปฏิบัติ}
 
-\begin{document}    
+\begin{document}
     \frontmatter
+    \pagenumbering{Roman}
     \lhead{}\rhead{}\chead{}\lfoot{}\cfoot{\thepage}\rfoot{}
-    \makecover    
+    \makecover
     \makeinnercover
     \makeengcover
     \makecopyrightcover
+
+    % Setting margin for page numbering on frontmatter
+    \newgeometry{top=1in, bottom=1in, left=1.5in, right=1in, includefoot}
+
     \makeletter
+    \makeapproveletter
+    \makeabstract{
+    	บทคัดย่อ
+    }
+%    \makeabstracteng{
+%        Abstract eng
+%    }
     \makeack{
         \begin{enumerate}
             \item คุณ ชื่อ สกุล \quad ตำแหน่ง xxxxxxx
         \end{enumerate}
     }
-    \makeapproveletter
-   
-    % Setting margin for page numbering on frontmatter
-    \newgeometry{top=1in, bottom=1in, left=1.5in, right=1in, includefoot}
-    
-    \makeabstract{
-    	บทคัดย่อ
-    }
-
-%    \makeabstracteng{
-%        Abstract eng
-%    }
 
     \newpage
     \addcontentsline{toc}{chapter}{สารบัญ}
     \tableofcontents
-    
+
     \newpage
     \addcontentsline{toc}{chapter}{สารบัญตาราง}
-    \listoftables    
-    
+    \listoftables
+
     \newpage
     \addcontentsline{toc}{chapter}{สารบัญภาพ}
     \listoffigures
-    
+
     % Reset frontmatter page numbering margin, back to original margin from class file
     \restoregeometry
 
     \mainmatter
     \lhead{}\rhead{\thepage}\chead{}\lfoot{}\cfoot{}\rfoot{}
-    
+
     \include{chapter1}
     \include{chapter2}
     \include{chapter3}
     \include{chapter4}
     \include{chapter5}
-    
+
     \clearpage
     \addcontentsline{toc}{chapter}{บรรณานุกรม}
     \bibliographystyle{IEEEtran}
     \bibliography{reference}
-    
+
     \startappendix
     \include{appendix}
-    
+
 \end{document}

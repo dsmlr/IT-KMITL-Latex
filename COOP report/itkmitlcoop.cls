@@ -25,8 +25,20 @@
 % ##### Font and Typing
 \XeTeXlinebreaklocale "th_TH" %สำหรับตัดคำ
 \XeTeXlinebreakskip = 0pt plus 1pt
-\setmainfont[Scale=1.3]{Angsana New}
-\linespread{1.3}
+\setmainfont[Scale=1.2, Script=Thai]{Angsana New} % if Angsana is installed
+% If you need to call Angsana locally from the project
+% Note: edit font file names as needed
+% \setmainfont{Angsana New}[
+%     Path = fonts/,
+%     UprightFont = Angsa,
+%     ItalicFont = Angsai,
+%     BoldFont = Angsab,
+%     BoldItalicFont = Angsabi,
+%     Extension = .ttf,
+%     Script=Thai,
+%     Scale=1.2
+% ]
+\linespread{1.2}
 
 % ##### Set Chapter and Section Style
 \titleformat{\chapter}[display]
@@ -52,7 +64,7 @@
 
 % ##### Set a pagination style to be on top right of page
 \pagestyle{fancy}
-\fancyhf{} 
+\fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 
 
@@ -72,7 +84,7 @@
     ศ\or ษ\or ส\or ห\or ฬ\or อ\else ฮ\else\xpg@ill@value{#1}{thalph}\fi}
 \renewcommand\thesubfigure{(\thaialph{subfigure})}
 
-% ##### TOC Overrided 
+% ##### TOC Overrided
 % อ้างอิงจาก http://kt-linux.blogspot.com/2011/01/latex.html
 %ตั้งค่าความลึกของหน้าสารบัญใหม่เป็น 1 (คือลงลึกแค่ชั้นเดียว) และตั้งค่าคำสั่ง \tableofcontents ใหม่
 \setcounter{tocdepth}{1}
@@ -123,7 +135,7 @@
 {\hspace{6ex}\thecontentslabel\hspace{2mm}}{\hspace{6ex}\thecontentslabel\hspace{2mm}}
 {\hfill \contentspage}
 
-% ##### LOT Overrided 
+% ##### LOT Overrided
 \newcommand{\lotheadcont}[3]{
     \ifthenelse{#1>29 \OR #2>29}{
         %Should be a newpage here.
@@ -155,7 +167,7 @@
 
 \titlecontents{table}[0mm]{\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listftablename}}{\contentspush{\tablename\hspace{1ex}\thecontentslabel\hspace{2mm}}}{}{\hfill \contentspage}
 
-% ##### LOF Overrided 
+% ##### LOF Overrided
 \newcommand{\lofheadcont}[3]{
     \ifthenelse{#1>29 \OR #2>29}{
         %Should be a newpage here.
@@ -193,7 +205,7 @@
 \newcommand{\makecover}{
     % ปกนอก
     \thispagestyle{empty}
-    
+
     \begin{center}
         \Large{\textbf{รายงานการปฏิบัติงานสหกิจศึกษา}} \\
         \LARGE{\textbf{เรื่อง}} \\
@@ -205,7 +217,7 @@
         \Large{\textbf{รหัสประจำตัว \SId}} \null \vfill
         \large{\textbf{รายงานนี้เป็นส่วนหนึ่งของการศึกษารายวิชา สหกิจศึกษา \\
                 สาขาวิชาเทคโนโลยีสารสนเทศ คณะเทคโนโลยีสารสนเทศ \\
-                ภาคเรียนที่~\Sem \  ปีการศึกษา~\AcaY\\ 
+                ภาคเรียนที่~\Sem \  ปีการศึกษา~\AcaY\\
                 สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง }}
     \end{center}
 }
@@ -223,7 +235,7 @@
         \Large{\textbf{\AuName}}  \\
         \Large{\textbf{รหัสประจำตัว \SId}} \null \vfill
         \large{\textbf{ปฏิบัติงาน ณ \Company \\
-                \Address \\ 
+                \Address \\
                 Web site : \Website}}
     \end{center}
 }
@@ -233,7 +245,7 @@
     \newpage
     \thispagestyle{empty}
     \begin{center}
-        \LARGE{\textbf{\ThesisTiTleENG}} \vskip7cm
+        \Large{\textbf{\ThesisTiTleENG}} \vskip7cm
         \Large{\textbf{\AuNameENG}}  \null \vfill
         \large{\textbf{A REPORT SUBMITTED IN PARTIAL FULFILLMENT OF \\
                 THE REQUIREMENT FOR COOPERATING EDUCATION PROGRAM \\
@@ -259,28 +271,30 @@
 \newcommand{\makeletter}{
     %-- หนังสือส่งรายงานการปฏิบัติงานสหกิจศึกษา -------------------------------------------
     \newpage
+    \setcounter{page}{1}
+    \addcontentsline{toc}{chapter}{จดหมายนำส่ง}
     \thispagestyle{empty}
     \begin{flushright}
         วันที่ \SubD
     \end{flushright}
-    
+
     \noindent เรื่อง ขอส่งรายงานการปฏิบัติงานสหกิจศึกษา \\
     เรียน \Advisor \vskip0.1cm
-    
+
     \hskip0.2cm ที่ปรึกษาสหกิจศึกษาในสาขาเทคโนโลยีสารสนเทศ \vskip1cm
-    
+
     ตามที่ข้าพเจ้า \AuName \ นักศึกษาสาขาวิชาเทคโนโลยีสารสนเทศ คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ได้ปฏิบัติงานสหกิจศึกษาระหว่างวันที่ \StartDWork \ ถึงวันที่ \EndDWork \ ในตำแหน่ง \Position \ ณ สถานประกอบการชื่อ \Company \ และได้รับมอบหมายจากพนักงานที่ปรึกษาให้ศึกษาและจัดทำรายงาน เรื่อง \ThesisTiTle
-    
-    บัดนี้ การปฏิบัติงานสหกิจศึกษาได้สิ้นสุดลงแล้ว จึงใคร่ขอส่งรายงานการปฏิบัติงาน สหกิจศึกษาดังกล่าวมาพร้อมนี้ จำนวน 1 เล่ม เพื่อขอรับคำปรึกษาต่อไป 
-    
-    จึงเรียนมาเพื่อโปรดพิจารณา 
-    
+
+    บัดนี้ การปฏิบัติงานสหกิจศึกษาได้สิ้นสุดลงแล้ว จึงใคร่ขอส่งรายงานการปฏิบัติงาน สหกิจศึกษาดังกล่าวมาพร้อมนี้ จำนวน 1 เล่ม เพื่อขอรับคำปรึกษาต่อไป
+
+    จึงเรียนมาเพื่อโปรดพิจารณา
+
     \vskip1.5cm
-    \begin{flushright}    
+    \begin{flushright}
         \begin{tabular}{c}
             ขอแสดงความนับถือ \\ \\
             .............................................................. \\
-            (\AuName ) 
+            (\AuName )
         \end{tabular}
     \end{flushright}
 }
@@ -292,15 +306,15 @@
         {\LARGE \textbf{กิตติกรรมประกาศ} }
     \end{center} \vskip2em
     \addcontentsline{toc}{chapter}{กิตติกรรมประกาศ}
-    
-    ตามที่ข้าพเจ้า \AuName \ ได้มาปฏิบัติงานสหกิจศึกษา ณ \Company \ ตั้งแต่วันที่ \StartDWork \ ถึงวันที่ \EndDWork \ ทำให้ข้าพเจ้าได้รับความรู้และประสบการณ์ต่าง ๆ ที่มีคุณค่ามากมาย สำหรับรายงานสหกิจศึกษาฉบับนี้สำเร็จลงได้ด้วยดี จากความช่วยเหลือและความร่วมมือสนับสนุนของหลายฝ่าย ดังนี้ 
-    
+
+    ตามที่ข้าพเจ้า \AuName \ ได้มาปฏิบัติงานสหกิจศึกษา ณ \Company \ ตั้งแต่วันที่ \StartDWork \ ถึงวันที่ \EndDWork \ ทำให้ข้าพเจ้าได้รับความรู้และประสบการณ์ต่าง ๆ ที่มีคุณค่ามากมาย สำหรับรายงานสหกิจศึกษาฉบับนี้สำเร็จลงได้ด้วยดี จากความช่วยเหลือและความร่วมมือสนับสนุนของหลายฝ่าย ดังนี้
+
     #1
-    
-    นอกจากนี้ยังมีบุคคลท่านอื่น ๆ อีกที่ไม่ได้กล่าวไว้ ณ ที่นี้ ซึ่งให้ความกรุณาแนะนำในจัดทำรายงานสหกิจศึกษาฉบับนี้ ข้าพเจ้าจึงใคร่ขอขอบพระคุณทุกท่านที่ได้มีส่วนร่วมในการให้ข้อมูลและให้ความเข้าใจเกี่ยวกับชีวิตของการปฏิบัติงาน รวมถึงเป็นที่ปรึกษาในการจัดทำรายงานฉบับนี้จนเสร็จสมบูรณ์ 
-    
+
+    นอกจากนี้ยังมีบุคคลท่านอื่น ๆ อีกที่ไม่ได้กล่าวไว้ ณ ที่นี้ ซึ่งให้ความกรุณาแนะนำในจัดทำรายงานสหกิจศึกษาฉบับนี้ ข้าพเจ้าจึงใคร่ขอขอบพระคุณทุกท่านที่ได้มีส่วนร่วมในการให้ข้อมูลและให้ความเข้าใจเกี่ยวกับชีวิตของการปฏิบัติงาน รวมถึงเป็นที่ปรึกษาในการจัดทำรายงานฉบับนี้จนเสร็จสมบูรณ์
+
     \vskip1.5cm
-    \begin{flushright}    
+    \begin{flushright}
         \begin{tabular}{c}
             \AuName \\
             ผู้จัดทำรายงาน \\
@@ -314,6 +328,7 @@
     % Do NOT EDIT this page
     \newpage
     \thispagestyle{empty}
+    \addcontentsline{toc}{chapter}{หน้าอนุมัติรายงาน}
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
             \textbf{ชื่อรายงานการปฏิบัติงานสหกิจศึกษา} & \ThesisTiTle \\
@@ -322,30 +337,29 @@
             \textbf{สาขาวิชา} & เทคโนโลยีสารสนเทศ
         \end{tabularx}
     \end{table} \vskip3cm
-    
-    
+
+
     \begin{center}
         ...................................................................... \\
         (\Advisor ) \\
         อาจารย์ที่ปรึกษาสหกิจศึกษา \vskip2.5cm
-        
+
         ...................................................................... \\
         (\Exami) \\
         พนักงานที่ปรึกษา \null \vfill
-        
+
         คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง	\\
         อนุมัติให้นับรายงานการปฏิบัติงานสหกิจศึกษาฉบับนี้ เป็นส่วนหนึ่งของการศึกษา \\
         ตามหลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ
-        
+
     \end{center}
 }
 
 \newcommand{\makeabstract}[1]{
     %-- Abstract Page ------------------------------------------
-    \setcounter{page}{1}
     \newpage
     \addcontentsline{toc}{chapter}{บทคัดย่อ}
-    
+
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
             \textbf{ชื่อรายงาน} & \ThesisTiTle \\
@@ -356,12 +370,12 @@
             \textbf{ปีการศึกษา} & \AcaY
         \end{tabularx}
     \end{table}
-    
+
     \vskip1cm
     \begin{center}
-        \textbf{\large บทคัดย่อ}
+        \textbf{\Large บทคัดย่อ}
     \end{center}
-    
+
     #1
 }
 
@@ -369,7 +383,7 @@
     %-- Abstract Page ------------------------------------------
     \newpage
     \addcontentsline{toc}{chapter}{บทคัดย่อ ภาษาอังกฤษ}
-    
+
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
             \textbf{Project Title} & \ThesisTiTleEng \\
@@ -379,13 +393,13 @@
             \textbf{Advisor} & \AdvisorEng \\
             \textbf{Year} & \AcaY
         \end{tabularx}
-    \end{table}    
-    
+    \end{table}
+
     \vskip1cm
     \begin{center}
-        \textbf{\large Abstract}
+        \textbf{\Large Abstract}
     \end{center}
-    
+
     #1
 }
 
@@ -393,7 +407,7 @@
     \appendix
     \renewcommand*{\appendixname}{ภาคผนวก}
     \renewcommand{\thechapter}{\thaialph{chapter}}
-    
+
     \titlecontents{chapter}[0mm]
     {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{สารบัญ}}
     {ภาคผนวก\hspace{1ex}\thecontentslabel\hspace{2mm}}
