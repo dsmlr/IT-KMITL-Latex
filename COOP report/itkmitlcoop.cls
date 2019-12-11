@@ -25,8 +25,11 @@
 % ##### Font and Typing
 \XeTeXlinebreaklocale "th_TH" %สำหรับตัดคำ
 \XeTeXlinebreakskip = 0pt plus 1pt
-\setmainfont[Scale=1.2, Script=Thai]{Angsana New} % if Angsana is installed
-% If you need to call Angsana locally from the project
+
+% If Angsana is installed, use this line
+\setmainfont[Scale=1.2, Script=Thai]{Angsana New}
+
+% If you need to call Angsana locally from the project, use these lines
 % Note: edit font file names as needed
 % \setmainfont{Angsana New}[
 %     Path = fonts/,
@@ -38,6 +41,7 @@
 %     Script=Thai,
 %     Scale=1.2
 % ]
+
 \linespread{1.2}
 
 % ##### Set Chapter and Section Style
@@ -365,7 +369,7 @@
             \textbf{ชื่อรายงาน} & \ThesisTiTle \\
             \textbf{ชื่อนักศึกษา} & \AuName \\
             \textbf{รหัสนักศึกษา} & \SId \\
-            \textbf{สาขาวิชา} & เทคโนโลยีสารสนเทศ \\
+            \textbf{สาขาวิชา} & \Department \\
             \textbf{อาจารย์ที่ปรึกษา} & \Advisor \\
             \textbf{ปีการศึกษา} & \AcaY
         \end{tabularx}
@@ -386,11 +390,11 @@
 
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
-            \textbf{Project Title} & \ThesisTiTleEng \\
-            \textbf{Name} & \AuNameEng \\
+            \textbf{Project Title} & \ThesisTiTleENG \\
+            \textbf{Name} & \AuNameENG \\
             \textbf{Student ID} & \SId \\
-            \textbf{Department} & \DepartmentEng \\
-            \textbf{Advisor} & \AdvisorEng \\
+            \textbf{Department} & \DepartmentENG \\
+            \textbf{Advisor} & \AdvisorENG \\
             \textbf{Year} & \AcaY
         \end{tabularx}
     \end{table}
