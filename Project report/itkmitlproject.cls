@@ -269,7 +269,7 @@
     \thispagestyle{empty}
     \null\vfill
     \begin{large}
-        \noindent\textbf{COPYRIGHT \AcaYAD \\
+        \noindent\textbf{COPYRIGHT \CopyrightYAD \\
             FACULTY OF INFORMATION TECHNOLOGY \\
             KING MONGKUT’S INSTITUTE OF TECHNOLOGY LADKRABANG}
     \end{large}
