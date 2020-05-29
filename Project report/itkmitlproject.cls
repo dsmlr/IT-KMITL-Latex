@@ -211,7 +211,7 @@
     
     \begin{center}
         \LARGE{\textbf{\ThesisTitle}} \\
-        \LARGE{\textbf{\ThesisTitleENG}} \vfill
+        \LARGE{\textbf{\MakeUppercase{\ThesisTitleENG}}} \vfill
         \Large{\textbf{โดย}} \\[0.5cm]
         \Large{\textbf{\Author}} \\
         \Large{\textbf{\AuthorENG}} \\[0.5cm]
@@ -232,7 +232,7 @@
     \thispagestyle{empty}
     \begin{center}
         \LARGE{\textbf{\ThesisTitle}} \\
-        \LARGE{\textbf{\ThesisTitleENG}} \vfill
+        \LARGE{\textbf{\MakeUppercase{\ThesisTitleENG}}} \vfill
         \Large{\textbf{โดย}} \\[0.5cm]
         \Large{\textbf{\Author}}  \\[0.5cm]
         % TODO Hide when AuthorTwo is empty
