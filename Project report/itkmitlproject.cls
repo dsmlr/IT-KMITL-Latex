@@ -401,7 +401,7 @@
 
 			\vfill
 
-			\Large{เรื่อง \\ \ThesisTitle \\ \ThesisTitleENG}
+			\Large{เรื่อง \\ \ThesisTitle \\ \MakeUppercase{\ThesisTitleENG}}
 
 			\vfill
 
