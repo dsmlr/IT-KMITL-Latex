@@ -60,7 +60,7 @@
 \renewcommand{\chaptername}{บทที่}
 \renewcommand{\figurename}{รูปที่}
 \renewcommand{\tablename}{ตารางที่}
-\renewcommand{\listfigurename}{สารบัญภาพ}
+\renewcommand{\listfigurename}{สารบัญรูป}
 \renewcommand{\listtablename}{สารบัญตาราง}
 
 % ##### Set a pagination style to be on top right of page
@@ -180,9 +180,9 @@
         \begin{center}
             {\LARGE \textbf{#3 (ต่อ)} }
         \end{center}  \vskip2em
-        \begin{flushright}
-            \textbf{หน้า}
-        \end{flushright}
+        \begin{flushleft}
+            \textbf{รูปที่} \hfill \textbf{หน้า}
+        \end{flushleft}
     }{}
 }
 
@@ -190,9 +190,9 @@
     \begin{center}
         {\LARGE \textbf{\listfigurename} }
     \end{center} \vskip2em
-    \begin{flushright}
-        \textbf{หน้า}
-    \end{flushright}
+    \begin{flushleft}
+        \textbf{รูปที่} \hfill \textbf{หน้า}
+    \end{flushleft}
     \resetlinenumber[1]
     \newcounter{lofitem}
     \@starttoc{lof}
@@ -202,7 +202,7 @@
 }
 
 % Indent the next line of the entry by the width of the label with \contentspush
-\titlecontents{figure}[0mm]{\stepcounter{lofitem}\lofheadcont{\thelinenumber}{\thelofitem}{\listfigurename}}{\contentspush{\figurename\hspace{1ex}\thecontentslabel\hspace{2mm}}}{}{\hfill\contentspage}
+\titlecontents{figure}[0mm]{\stepcounter{lofitem}\lofheadcont{\thelinenumber}{\thelofitem}{\listfigurename}}{\contentspush{\hspace{5ex}\thecontentslabel\hspace{2mm}}}{}{\hfill\contentspage}
 
 %  Newcommand each required page
 \newcommand{\makecover}{
