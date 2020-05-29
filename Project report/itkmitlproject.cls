@@ -148,9 +148,9 @@
         \begin{center}
             {\LARGE \textbf{#3 (ต่อ)} }
         \end{center}  \vskip2em
-        \begin{flushright}
-            \textbf{หน้า}
-        \end{flushright}
+        \begin{flushleft}
+            \textbf{\tablename} \hfill \textbf{หน้า}
+        \end{flushleft}
     }{}
 }
 
@@ -158,9 +158,9 @@
     \begin{center}
         {\LARGE \textbf{\listtablename} }
     \end{center} \vskip2em
-    \begin{flushright}
-        \textbf{หน้า}
-    \end{flushright}
+    \begin{flushleft}
+        \textbf{\tablename} \hfill \textbf{หน้า}
+    \end{flushleft}
     \resetlinenumber[1]
     \newcounter{lotitem}
     \@starttoc{lot}%
@@ -168,7 +168,7 @@
     \cleardoublepage
 }
 
-\titlecontents{table}[0mm]{\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listftablename}}{\contentspush{\tablename\hspace{1ex}\thecontentslabel\hspace{2mm}}}{}{\hfill \contentspage}
+\titlecontents{table}[0mm]{\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listftablename}}{\contentspush{\hspace{5ex}\thecontentslabel\hspace{2mm}}}{}{\hfill \contentspage}
 
 % ##### LOF Overridden 
 \newcommand{\lofheadcont}[3]{
