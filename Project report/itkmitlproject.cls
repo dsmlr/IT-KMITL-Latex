@@ -304,12 +304,12 @@
     
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
-            \textbf{ชื่อรายงาน} & \ThesisTitle \\
-            \textbf{ชื่อนักศึกษา} & \Author, \AuthorTwo \\
-            \textbf{รหัสนักศึกษา} & \SId, \SIdTwo \\
+            \textbf{หัวข้อโครงงาน} & \ThesisTitle \\
+            \textbf{นักศึกษา} & \Author, \AuthorTwo \\
+            \textbf{ปริญญา} & วิทยาศาสตรบันฑิต \\
             \textbf{สาขาวิชา} & เทคโนโลยีสารสนเทศ \\
-            \textbf{อาจารย์ที่ปรึกษา} & \Advisor \\
-            \textbf{ปีการศึกษา} & \AcaY
+            \textbf{ปีการศึกษา} & \AcaY \\
+            \textbf{อาจารย์ที่ปรึกษา} & \Advisor
         \end{tabularx}
     \end{table}
     
