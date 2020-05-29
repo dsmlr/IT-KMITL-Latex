@@ -252,9 +252,9 @@
     \newpage
     \thispagestyle{empty}
     \begin{center}
-        \LARGE{\textbf{\ThesisTitleENG}} \vfill
-        \Large{\textbf{\AuthorENG}} \\[0.5cm]
-        \Large{\textbf{\AuthorTwoENG}} \vfill
+        \LARGE{\textbf{\MakeUppercase{\ThesisTitleENG}}} \vfill
+        \Large{\textbf{\MakeUppercase{\AuthorENG}}} \\[0.5cm]
+        \Large{\textbf{\MakeUppercase{\AuthorTwoENG}}} \vfill
         \large{\textbf{A PROJECT SUBMITTED IN PARTIAL FULFILLMENT \\
                 OF THE REQUIREMENT FOR THE DEGREE OF \\
                 BACHELOR OF SCIENCE PROGRAM IN INFORMATION TECHNOLOGY \\
