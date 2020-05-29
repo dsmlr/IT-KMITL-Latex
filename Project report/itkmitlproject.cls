@@ -181,7 +181,7 @@
             {\LARGE \textbf{#3 (ต่อ)} }
         \end{center}  \vskip2em
         \begin{flushleft}
-            \textbf{รูปที่} \hfill \textbf{หน้า}
+            \textbf{\figurename} \hfill \textbf{หน้า}
         \end{flushleft}
     }{}
 }
@@ -191,7 +191,7 @@
         {\LARGE \textbf{\listfigurename} }
     \end{center} \vskip2em
     \begin{flushleft}
-        \textbf{รูปที่} \hfill \textbf{หน้า}
+        \textbf{\figurename} \hfill \textbf{หน้า}
     \end{flushleft}
     \resetlinenumber[1]
     \newcounter{lofitem}
