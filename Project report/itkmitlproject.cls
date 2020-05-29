@@ -289,9 +289,7 @@
     \begin{flushright}    
         \begin{tabular}{c}
             \Author \\
-            \AuthorTwo \\
-            ผู้จัดทำรายงาน \\
-            วันที่ \SubD
+            \AuthorTwo
         \end{tabular}
     \end{flushright}
 }
