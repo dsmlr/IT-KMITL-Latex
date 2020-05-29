@@ -212,13 +212,12 @@
     \begin{center}
         \LARGE{\textbf{\ThesisTitle}} \\
         \LARGE{\textbf{\ThesisTitleENG}} \vfill
+        \Large{\textbf{โดย}} \\[0.5cm]
         \Large{\textbf{\Author}} \\
-        \Large{\textbf{\AuthorENG}} \\
-        \Large{\textbf{\SId}} \\[0.5cm]
+        \Large{\textbf{\AuthorENG}} \\[0.5cm]
         	% TODO Hide when AuthorTwo is empty
         	\Large{\textbf{\AuthorTwo}} \\
-        \Large{\textbf{\AuthorTwoENG}} \\
-        \Large{\textbf{\SIdTwo}} \vfill
+        \Large{\textbf{\AuthorTwoENG}} \vfill
         \large{\textbf{ปริญญานิพนธ์นี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรวิทยาศาสตรบัณฑิต \\
                 สาขาวิชาเทคโนโลยีสารสนเทศ คณะเทคโนโลยีสารสนเทศ \\
                 สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง \\
