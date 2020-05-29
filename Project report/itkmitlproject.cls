@@ -328,12 +328,12 @@
     
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
-            \textbf{Project Title} & \ThesisTitleENG \\
-            \textbf{Name} & \AuthorENG, \AuthorTwoENG \\
-            \textbf{Student ID} & \SId, \SIdTwo \\
-            \textbf{Department} & Information Technology \\
-            \textbf{Advisor} & \AdvisorENG \\
-            \textbf{Year} & \AcaYAD
+            \textbf{Project Title} & \MakeUppercase{\ThesisTitleENG} \\
+            \textbf{Student} & \AuthorENG, \AuthorTwoENG \\
+            \textbf{Degree} & Bachelor of Science \\
+            \textbf{Program} & Information Technology \\
+            \textbf{Academic Year} & \AcaYAD \\
+            \textbf{Advisor} & \AdvisorENG
         \end{tabularx}
     \end{table}    
     
