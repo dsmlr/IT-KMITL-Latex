@@ -27,7 +27,7 @@
 
 % ##### If condition for Thai language
 \newcommand\ifthai[1]{
-    \@ifundefined{isappendixthaialpha}{}
+    \@ifundefined{setthaienv}{}
     {
         #1
     }
