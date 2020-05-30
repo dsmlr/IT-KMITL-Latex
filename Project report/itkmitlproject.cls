@@ -22,8 +22,8 @@
 \RequirePackage{array}
 
 % ##### Re-define words with English supports
-\input{definition-th.tex}
-% \input{definition-en.tex}
+% \input{definition-th.tex}
+\input{definition-en.tex}
 
 % ##### Set caption label to be left-aligned
 \captionsetup[table]{justification=raggedright, singlelinecheck=off}
@@ -437,6 +437,12 @@
 
 \newcommand\startappendix{
     \appendix
+
+    \@ifundefined{isappendixthaialpha}{}
+    {
+        \renewcommand{\thechapter}{\thaialph{chapter}}
+    }
+
     \titlecontents{chapter}[0mm]
     {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{\contentsname}}
     {\appendixname\hspace{1ex}\thecontentslabel\hspace{2mm}}
