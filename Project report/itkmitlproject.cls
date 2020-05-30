@@ -437,7 +437,6 @@
 
 \newcommand\startappendix{
     \appendix
-
     \titlecontents{chapter}[0mm]
     {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{\contentsname}}
     {\appendixname\hspace{1ex}\thecontentslabel\hspace{2mm}}
