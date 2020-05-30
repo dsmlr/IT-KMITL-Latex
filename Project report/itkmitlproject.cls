@@ -22,8 +22,16 @@
 \RequirePackage{array}
 
 % ##### Re-define words with English supports
-% \input{definition-th.tex}
-\input{definition-en.tex}
+\input{definition-th.tex}
+% \input{definition-en.tex}
+
+% ##### If condition for Thai language
+\newcommand\ifthai[1]{
+    \@ifundefined{isappendixthaialpha}{}
+    {
+        #1
+    }
+}
 
 % ##### Set caption label to be left-aligned
 \captionsetup[table]{justification=raggedright, singlelinecheck=off}
@@ -78,7 +86,7 @@
     ฌ\or ญ\or ฎ\or ฏ\or ฐ\or ฑ\or ฒ\or ณ\or ด\or ต\or ถ\or ท\or ธ\or น\or
     บ\or ป\or ผ\or ฝ\or พ\or ฟ\or ภ\or ม\or ย\or ร\or ฤ\or ล\or ฦ\or ว\or
     ศ\or ษ\or ส\or ห\or ฬ\or อ\else ฮ\else\xpg@ill@value{#1}{thalph}\fi}
-\renewcommand\thesubfigure{(\thaialph{subfigure})}
+\ifthai{\renewcommand\thesubfigure{(\thaialph{subfigure})}}
 
 % ##### TOC Overriden
 % อ้างอิงจาก http://kt-linux.blogspot.com/2011/01/latex.html
@@ -113,7 +121,7 @@
         \resetlinenumber[1]
         \setcounter{tocitem}{0}
         \begin{center}
-            {\LARGE \textbf{#3 (ต่อ)} }
+            {\LARGE \textbf{#3 (\continuename)} }
         \end{center}  \vskip2em
         \begin{flushright}
             \textbf{\pagecolumnname}
@@ -141,7 +149,7 @@
         \resetlinenumber[1]
         \setcounter{lotitem}{1}
         \begin{center}
-            {\LARGE \textbf{#3 (ต่อ)} }
+            {\LARGE \textbf{#3 (\continuename)} }
         \end{center}  \vskip2em
         \begin{flushleft}
             \textbf{\tablename} \hfill \textbf{\pagecolumnname}
@@ -173,7 +181,7 @@
         \resetlinenumber[1]
         \setcounter{lofitem}{1}
         \begin{center}
-            {\LARGE \textbf{#3 (ต่อ)} }
+            {\LARGE \textbf{#3 (\continuename)} }
         \end{center}  \vskip2em
         \begin{flushleft}
             \textbf{\figurename} \hfill \textbf{\pagecolumnname}
@@ -438,10 +446,7 @@
 \newcommand\startappendix{
     \appendix
 
-    \@ifundefined{isappendixthaialpha}{}
-    {
-        \renewcommand{\thechapter}{\thaialph{chapter}}
-    }
+    \ifthai{\renewcommand{\thechapter}{\thaialph{chapter}}}
 
     \titlecontents{chapter}[0mm]
     {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{\contentsname}}
