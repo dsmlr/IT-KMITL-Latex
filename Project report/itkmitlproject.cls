@@ -89,7 +89,7 @@
         {\LARGE \textbf{\contentsname} }
     \end{center} \vskip2em
     \begin{flushright}
-        \textbf{หน้า}
+        \textbf{\pagecolumnname}
     \end{flushright}
     % Hold current page value
     % for TOC heading
@@ -116,7 +116,7 @@
             {\LARGE \textbf{#3 (ต่อ)} }
         \end{center}  \vskip2em
         \begin{flushright}
-            \textbf{หน้า}
+            \textbf{\pagecolumnname}
         \end{flushright}
     }{}
 }
@@ -144,7 +144,7 @@
             {\LARGE \textbf{#3 (ต่อ)} }
         \end{center}  \vskip2em
         \begin{flushleft}
-            \textbf{\tablename} \hfill \textbf{หน้า}
+            \textbf{\tablename} \hfill \textbf{\pagecolumnname}
         \end{flushleft}
     }{}
 }
@@ -154,7 +154,7 @@
         {\LARGE \textbf{\listtablename} }
     \end{center} \vskip2em
     \begin{flushleft}
-        \textbf{\tablename} \hfill \textbf{หน้า}
+        \textbf{\tablename} \hfill \textbf{\pagecolumnname}
     \end{flushleft}
     \resetlinenumber[1]
     \newcounter{lotitem}
@@ -176,7 +176,7 @@
             {\LARGE \textbf{#3 (ต่อ)} }
         \end{center}  \vskip2em
         \begin{flushleft}
-            \textbf{\figurename} \hfill \textbf{หน้า}
+            \textbf{\figurename} \hfill \textbf{\pagecolumnname}
         \end{flushleft}
     }{}
 }
@@ -186,7 +186,7 @@
         {\LARGE \textbf{\listfigurename} }
     \end{center} \vskip2em
     \begin{flushleft}
-        \textbf{\figurename} \hfill \textbf{หน้า}
+        \textbf{\figurename} \hfill \textbf{\pagecolumnname}
     \end{flushleft}
     \resetlinenumber[1]
     \newcounter{lofitem}
