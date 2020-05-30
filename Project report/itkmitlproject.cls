@@ -21,7 +21,7 @@
 \RequirePackage{etoolbox}
 \RequirePackage{array}
 
-% ##### Re-define word
+% ##### Re-define words with English supports
 \input{definition-th.tex}
 % \input{definition-en.tex}
 
