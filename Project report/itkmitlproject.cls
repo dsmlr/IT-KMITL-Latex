@@ -21,6 +21,10 @@
 \RequirePackage{etoolbox}
 \RequirePackage{array}
 
+% ##### Re-define word
+\input{definition-th.tex}
+% \input{definition-en.tex}
+
 % ##### Set caption label to be left-aligned
 \captionsetup[table]{justification=raggedright, singlelinecheck=off}
 
@@ -54,18 +58,9 @@
 {\normalfont\bfseries}{\thesubsection}{0.5em}{}
 \titlespacing*{\subsection}{0pt}{1em}{0.25em}
 
-% ##### Re-define word
-\renewcommand{\bibname}{บรรณานุกรม}
-\renewcommand{\contentsname}{สารบัญ}
-\renewcommand{\chaptername}{บทที่}
-\renewcommand{\figurename}{รูปที่}
-\renewcommand{\tablename}{ตารางที่}
-\renewcommand{\listfigurename}{สารบัญรูป}
-\renewcommand{\listtablename}{สารบัญตาราง}
-
 % ##### Set a pagination style to be on top right of page
 \pagestyle{fancy}
-\fancyhf{} 
+\fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 
 
@@ -85,13 +80,13 @@
     ศ\or ษ\or ส\or ห\or ฬ\or อ\else ฮ\else\xpg@ill@value{#1}{thalph}\fi}
 \renewcommand\thesubfigure{(\thaialph{subfigure})}
 
-% ##### TOC Overriden 
+% ##### TOC Overriden
 % อ้างอิงจาก http://kt-linux.blogspot.com/2011/01/latex.html
 % ตั้งค่าความลึกของหน้าสารบัญใหม่เป็น 1 (คือลงลึกแค่ชั้นเดียว) และตั้งค่าคำสั่ง \tableofcontents ใหม่
 \setcounter{tocdepth}{1}
 \renewcommand\tableofcontents{
     \begin{center}
-        {\LARGE \textbf{สารบัญ} }
+        {\LARGE \textbf{\contentsname} }
     \end{center} \vskip2em
     \begin{flushright}
         \textbf{หน้า}
@@ -138,7 +133,7 @@
 {\hspace{6ex}\thecontentslabel\hspace{2mm}}{\hspace{6ex}\thecontentslabel\hspace{2mm}}
 {\hfill \contentspage}
 
-% ##### LOT Overrided 
+% ##### LOT Overrided
 \newcommand{\lotheadcont}[3]{
     \ifthenelse{#1>29 \OR #2>29}{
         %Should be a newpage here.
@@ -170,7 +165,7 @@
 
 \titlecontents{table}[0mm]{\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listftablename}}{\contentspush{\hspace{5ex}\thecontentslabel\hspace{2mm}}}{}{\hfill \contentspage}
 
-% ##### LOF Overridden 
+% ##### LOF Overridden
 \newcommand{\lofheadcont}[3]{
     \ifthenelse{#1>29 \OR #2>29}{
         %Should be a newpage here.
@@ -208,7 +203,7 @@
 \newcommand{\makecover}{
     % ปกนอก
     \thispagestyle{empty}
-    
+
     \begin{center}
         \LARGE{\textbf{\ThesisTitle}} \\
         \LARGE{\textbf{\MakeUppercase{\ThesisTitleENG}}} \vfill
@@ -279,14 +274,14 @@
     %-- ACKNOWLEDGEMENTS Page -------------------------------------------
     \newpage
     \begin{center}
-        {\LARGE \textbf{กิตติกรรมประกาศ} }
+        {\LARGE \textbf{\ackname} }
     \end{center} \vskip2em
-    \addcontentsline{toc}{chapter}{กิตติกรรมประกาศ}
-    
+    \addcontentsline{toc}{chapter}{\ackname}
+
    \input{acknowledgement}
-    
+
     \vskip1.5cm
-    \begin{flushright}    
+    \begin{flushright}
         \begin{tabular}{c}
             \Author \\
             \AuthorTwo
@@ -298,8 +293,8 @@
     %-- Abstract Page ------------------------------------------
     \setcounter{page}{1}
     \newpage
-    \addcontentsline{toc}{chapter}{บทคัดย่อ}
-    
+    \addcontentsline{toc}{chapter}{\abstractnameth}
+
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
             \textbf{หัวข้อโครงงาน} & \ThesisTitle \\
@@ -310,20 +305,20 @@
             \textbf{อาจารย์ที่ปรึกษา} & \Advisor
         \end{tabularx}
     \end{table}
-    
+
     \vskip1cm
     \begin{center}
         \textbf{\LARGE บทคัดย่อ}
     \end{center}
-    
+
     #1
 }
 
 \newcommand{\makeabstracteng}[1]{
     %-- Abstract Page ------------------------------------------
     \newpage
-    \addcontentsline{toc}{chapter}{บทคัดย่อ ภาษาอังกฤษ}
-    
+    \addcontentsline{toc}{chapter}{\abstractnameen}
+
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
             \textbf{Project Title} & \MakeUppercase{\ThesisTitleENG} \\
@@ -333,13 +328,13 @@
             \textbf{Academic Year} & \AcaYAD \\
             \textbf{Advisor} & \AdvisorENG
         \end{tabularx}
-    \end{table}    
-    
+    \end{table}
+
     \vskip1cm
     \begin{center}
         \textbf{\LARGE Abstract}
     \end{center}
-    
+
     #1
 }
 
@@ -379,7 +374,7 @@
 
 	\vfill
 
-	\begin{flushright}    
+	\begin{flushright}
         \begin{tabular}{c l}
             \large{\textbf{\Advisor}} & \large{\textbf{อาจารย์ที่ปรึกษา}} \\
             \null \\
@@ -417,7 +412,7 @@
 
 	\vfill
 
-	\begin{flushright}    
+	\begin{flushright}
         \begin{tabular}{c}
             ........................................... \\
             \Author \\
@@ -433,20 +428,18 @@
 	\newpage
 
 	\begin{center}
-    		{\LARGE \textbf{ประวัติผู้เขียน} }
+    		{\LARGE \textbf{\biographyname} }
 	\end{center} \vskip2em
-	\addcontentsline{toc}{chapter}{ประวัติผู้เขียน}
+	\addcontentsline{toc}{chapter}{\biographyname}
 
 	\input{author-bio}
 }
 
 \newcommand\startappendix{
     \appendix
-    \renewcommand*{\appendixname}{ภาคผนวก}
-    \renewcommand{\thechapter}{\thaialph{chapter}}
-    
+
     \titlecontents{chapter}[0mm]
-    {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{สารบัญ}}
-    {ภาคผนวก\hspace{1ex}\thecontentslabel\hspace{2mm}}
+    {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{\contentsname}}
+    {\appendixname\hspace{1ex}\thecontentslabel\hspace{2mm}}
     {}{\hfill \contentspage}
 }

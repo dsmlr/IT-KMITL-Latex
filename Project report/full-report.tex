@@ -44,19 +44,19 @@
 %15. Copyright year (AD)
 \newcommand{\CopyrightYAD}{2020}
 
-\begin{document}    
+\begin{document}
     \frontmatter
     \lhead{}\rhead{}\chead{}\lfoot{}\cfoot{\thepage}\rfoot{}
-    \makecover    
+    \makecover
     \makeinnercover
     \makeengcover
     \makecopyrightcover
     \makethesiscert
     \makeprojectcert
-   
+
     % Setting margin for page numbering on frontmatter
     \newgeometry{top=1in, bottom=1in, left=1.5in, right=1in, includefoot}
-    
+
     \makeabstract{
         บทคัดย่อ
     }
@@ -68,37 +68,37 @@
     \makeack
 
     \newpage
-    \addcontentsline{toc}{chapter}{สารบัญ}
+    \addcontentsline{toc}{chapter}{\contentsname{}}
     \tableofcontents
-    
+
     \newpage
-    \addcontentsline{toc}{chapter}{สารบัญตาราง}
-    \listoftables    
-    
+    \addcontentsline{toc}{chapter}{\listtablename}
+    \listoftables
+
     \newpage
-    \addcontentsline{toc}{chapter}{สารบัญรูป}
+    \addcontentsline{toc}{chapter}{\listfigurename}
     \listoffigures
-    
+
     % Reset frontmatter page numbering margin, back to original margin from class file
     \restoregeometry
 
     \mainmatter
     \lhead{}\rhead{\thepage}\chead{}\lfoot{}\cfoot{}\rfoot{}
-    
+
     \include{chapter1}
     \include{chapter2}
     \include{chapter3}
     \include{chapter4}
     \include{chapter5}
-    
+
     \clearpage
-    \addcontentsline{toc}{chapter}{บรรณานุกรม}
+    \addcontentsline{toc}{chapter}{\bibname}
     \bibliographystyle{IEEEtran}
     \bibliography{reference}
-    
+
     \startappendix
     \include{appendix}
 
     \makeauthorbio
-    
+
 \end{document}
