@@ -22,7 +22,8 @@
 \RequirePackage{array}
 
 % ##### Set caption label to be left-aligned
-\captionsetup[table]{justification=raggedright, singlelinecheck=off}
+\captionsetup[table]{justification=raggedright, singlelinecheck=off, labelsep=space}
+\captionsetup[figure]{labelsep=space}
 
 % ##### new command for Roman number
 \newcommand{\rNum}[1]{\lowercase\expandafter{\romannumeral #1\relax}}
