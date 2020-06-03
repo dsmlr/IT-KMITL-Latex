@@ -7,6 +7,7 @@ The latex class for writing a thesis and a cooperation report.
 
 - `Xelatex`
 - `Bibtex`
+- `latexmk`
 
 ## COOP Report
 
