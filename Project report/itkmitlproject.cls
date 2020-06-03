@@ -25,9 +25,6 @@
 \captionsetup[table]{justification=raggedright, singlelinecheck=off, labelsep=space}
 \captionsetup[figure]{labelsep=space}
 
-% ##### new command for Roman number
-\newcommand{\rNum}[1]{\lowercase\expandafter{\romannumeral #1\relax}}
-
 % ##### Font and Typing
 \XeTeXlinebreaklocale "th_TH" %สำหรับตัดคำ
 \XeTeXlinebreakskip = 0pt plus 1pt
@@ -297,7 +294,6 @@
 
 \newcommand{\makeabstract}[1]{
     %-- Abstract Page ------------------------------------------
-    \setcounter{page}{1}
     \newpage
     \addcontentsline{toc}{chapter}{บทคัดย่อ}
 
