@@ -65,7 +65,11 @@ Build
 ```
 latexmk
 ```
-Clean
+Build and preview continuously
+```
+latexmk -pvc
+```
+Clean all regeneratable files
 ```
 latexmk -c
 ```
