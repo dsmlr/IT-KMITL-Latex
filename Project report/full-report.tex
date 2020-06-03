@@ -5,6 +5,9 @@
 \usepackage{indentfirst}
 \usepackage{cite}
 
+% \useEnglish
+\useThai
+
 \graphicspath{ {images/} }
 
 \makeatletter
@@ -70,15 +73,15 @@
     \makeack
 
     \newpage
-    \addcontentsline{toc}{chapter}{สารบัญ}
+    \addcontentsline{toc}{chapter}{\contentsname}
     \tableofcontents
 
     \newpage
-    \addcontentsline{toc}{chapter}{สารบัญตาราง}
+    \addcontentsline{toc}{chapter}{\listtablename}
     \listoftables
 
     \newpage
-    \addcontentsline{toc}{chapter}{สารบัญรูป}
+    \addcontentsline{toc}{chapter}{\listfigurename}
     \listoffigures
 
     % Reset frontmatter page numbering margin, back to original margin from class file
@@ -94,7 +97,7 @@
     \include{chapter5}
 
     \clearpage
-    \addcontentsline{toc}{chapter}{บรรณานุกรม}
+    \addcontentsline{toc}{chapter}{\bibname}
     \bibliographystyle{IEEEtran}
     \bibliography{reference}
 

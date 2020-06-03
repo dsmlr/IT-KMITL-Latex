@@ -21,6 +21,53 @@
 \RequirePackage{etoolbox}
 \RequirePackage{array}
 
+% ##### Re-define words
+\newcommand{\useThai}{
+    \renewcommand{\bibname}{บรรณานุกรม}
+    \renewcommand{\contentsname}{สารบัญ}
+    \renewcommand{\chaptername}{บทที่}
+    \renewcommand{\figurename}{รูปที่}
+    \renewcommand{\tablename}{ตารางที่}
+    \renewcommand{\listfigurename}{สารบัญรูป}
+    \renewcommand{\listtablename}{สารบัญตาราง}
+    \renewcommand{\appendixname}{ภาคผนวก}
+
+    \newcommand{\ackname}{กิตติกรรมประกาศ}
+    \newcommand{\abstractnameen}{บทคัดย่อ ภาษาอังกฤษ}
+    \newcommand{\abstractnameth}{บทคัดย่อ}
+    \newcommand{\biographyname}{ประวัติผู้เขียน}
+    \newcommand{\pagecolumnname}{หน้า}
+    \newcommand{\continuename}{ต่อ}
+
+    % Use thai character sequence
+    \newcommand{\setthaienv}{}
+}
+\newcommand{\useEnglish}{
+    \renewcommand{\bibname}{Bibliography}
+    \renewcommand{\contentsname}{Content}
+    \renewcommand{\chaptername}{Chapter}
+    \renewcommand{\figurename}{Figure}
+    \renewcommand{\tablename}{Table}
+    \renewcommand{\listfigurename}{List of Figures}
+    \renewcommand{\listtablename}{List of Tables}
+    \renewcommand{\appendixname}{Appendix}
+
+    \newcommand{\ackname}{Acknowledgment}
+    \newcommand{\abstractnameen}{Abstract}
+    \newcommand{\abstractnameth}{Abstract Thai}
+    \newcommand{\biographyname}{Biography}
+    \newcommand{\pagecolumnname}{Page}
+    \newcommand{\continuename}{Continue}
+}
+
+% ##### If condition for Thai language
+\newcommand\ifthai[1]{
+    \@ifundefined{setthaienv}{}
+    {
+        #1
+    }
+}
+
 % ##### Set caption label to be left-aligned
 \captionsetup[table]{justification=raggedright, singlelinecheck=off, labelsep=space}
 \captionsetup[figure]{labelsep=space}
@@ -52,15 +99,6 @@
 {\normalfont\bfseries}{\thesubsection}{0.5em}{}
 \titlespacing*{\subsection}{0pt}{1em}{0.25em}
 
-% ##### Re-define word
-\renewcommand{\bibname}{บรรณานุกรม}
-\renewcommand{\contentsname}{สารบัญ}
-\renewcommand{\chaptername}{บทที่}
-\renewcommand{\figurename}{รูปที่}
-\renewcommand{\tablename}{ตารางที่}
-\renewcommand{\listfigurename}{สารบัญรูป}
-\renewcommand{\listtablename}{สารบัญตาราง}
-
 % ##### Set a pagination style to be on top right of page
 \pagestyle{fancy}
 \fancyhf{}
@@ -81,7 +119,7 @@
     ฌ\or ญ\or ฎ\or ฏ\or ฐ\or ฑ\or ฒ\or ณ\or ด\or ต\or ถ\or ท\or ธ\or น\or
     บ\or ป\or ผ\or ฝ\or พ\or ฟ\or ภ\or ม\or ย\or ร\or ฤ\or ล\or ฦ\or ว\or
     ศ\or ษ\or ส\or ห\or ฬ\or อ\else ฮ\else\xpg@ill@value{#1}{thalph}\fi}
-\renewcommand\thesubfigure{(\thaialph{subfigure})}
+\ifthai{\renewcommand\thesubfigure{(\thaialph{subfigure})}}
 
 % ##### TOC Overriden
 % อ้างอิงจาก http://kt-linux.blogspot.com/2011/01/latex.html
@@ -89,10 +127,10 @@
 \setcounter{tocdepth}{1}
 \renewcommand\tableofcontents{
     \begin{center}
-        {\LARGE \textbf{สารบัญ} }
+        {\LARGE \textbf{\contentsname} }
     \end{center} \vskip2em
     \begin{flushright}
-        \textbf{หน้า}
+        \textbf{\pagecolumnname}
     \end{flushright}
     % Hold current page value
     % for TOC heading
@@ -116,10 +154,10 @@
         \resetlinenumber[1]
         \setcounter{tocitem}{0}
         \begin{center}
-            {\LARGE \textbf{#3 (ต่อ)} }
+            {\LARGE \textbf{#3 (\continuename)} }
         \end{center}  \vskip2em
         \begin{flushright}
-            \textbf{หน้า}
+            \textbf{\pagecolumnname}
         \end{flushright}
     }{}
 }
@@ -144,10 +182,10 @@
         \resetlinenumber[1]
         \setcounter{lotitem}{1}
         \begin{center}
-            {\LARGE \textbf{#3 (ต่อ)} }
+            {\LARGE \textbf{#3 (\continuename)} }
         \end{center}  \vskip2em
         \begin{flushleft}
-            \textbf{\tablename} \hfill \textbf{หน้า}
+            \textbf{\tablename} \hfill \textbf{\pagecolumnname}
         \end{flushleft}
     }{}
 }
@@ -157,7 +195,7 @@
         {\LARGE \textbf{\listtablename} }
     \end{center} \vskip2em
     \begin{flushleft}
-        \textbf{\tablename} \hfill \textbf{หน้า}
+        \textbf{\tablename} \hfill \textbf{\pagecolumnname}
     \end{flushleft}
     \resetlinenumber[1]
     \newcounter{lotitem}
@@ -176,10 +214,10 @@
         \resetlinenumber[1]
         \setcounter{lofitem}{1}
         \begin{center}
-            {\LARGE \textbf{#3 (ต่อ)} }
+            {\LARGE \textbf{#3 (\continuename)} }
         \end{center}  \vskip2em
         \begin{flushleft}
-            \textbf{\figurename} \hfill \textbf{หน้า}
+            \textbf{\figurename} \hfill \textbf{\pagecolumnname}
         \end{flushleft}
     }{}
 }
@@ -189,7 +227,7 @@
         {\LARGE \textbf{\listfigurename} }
     \end{center} \vskip2em
     \begin{flushleft}
-        \textbf{\figurename} \hfill \textbf{หน้า}
+        \textbf{\figurename} \hfill \textbf{\pagecolumnname}
     \end{flushleft}
     \resetlinenumber[1]
     \newcounter{lofitem}
@@ -277,9 +315,9 @@
     %-- ACKNOWLEDGEMENTS Page -------------------------------------------
     \newpage
     \begin{center}
-        {\LARGE \textbf{กิตติกรรมประกาศ} }
+        {\LARGE \textbf{\ackname} }
     \end{center} \vskip2em
-    \addcontentsline{toc}{chapter}{กิตติกรรมประกาศ}
+    \addcontentsline{toc}{chapter}{\ackname}
 
    \input{acknowledgement}
 
@@ -295,7 +333,7 @@
 \newcommand{\makeabstract}[1]{
     %-- Abstract Page ------------------------------------------
     \newpage
-    \addcontentsline{toc}{chapter}{บทคัดย่อ}
+    \addcontentsline{toc}{chapter}{\abstractnameth}
 
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
@@ -319,7 +357,7 @@
 \newcommand{\makeabstracteng}[1]{
     %-- Abstract Page ------------------------------------------
     \newpage
-    \addcontentsline{toc}{chapter}{บทคัดย่อ ภาษาอังกฤษ}
+    \addcontentsline{toc}{chapter}{\abstractnameen}
 
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
@@ -430,20 +468,20 @@
 	\newpage
 
 	\begin{center}
-    		{\LARGE \textbf{ประวัติผู้เขียน} }
+    		{\LARGE \textbf{\biographyname} }
 	\end{center} \vskip2em
-	\addcontentsline{toc}{chapter}{ประวัติผู้เขียน}
+	\addcontentsline{toc}{chapter}{\biographyname}
 
 	\input{author-bio}
 }
 
 \newcommand\startappendix{
     \appendix
-    \renewcommand*{\appendixname}{ภาคผนวก}
-    \renewcommand{\thechapter}{\thaialph{chapter}}
+
+    \ifthai{\renewcommand{\thechapter}{\thaialph{chapter}}}
 
     \titlecontents{chapter}[0mm]
-    {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{สารบัญ}}
-    {ภาคผนวก\hspace{1ex}\thecontentslabel\hspace{2mm}}
+    {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{\contentsname}}
+    {\appendixname\hspace{1ex}\thecontentslabel\hspace{2mm}}
     {}{\hfill \contentspage}
 }
