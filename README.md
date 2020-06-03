@@ -1,3 +1,5 @@
+![CI](https://github.com/dobakung/IT-KMITL-Latex/workflows/CI/badge.svg)
+
 # IT@KMITL Latex Template
 The latex class for writing a thesis and a cooperation report.
 

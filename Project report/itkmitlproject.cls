@@ -34,10 +34,8 @@
 }
 
 % ##### Set caption label to be left-aligned
-\captionsetup[table]{justification=raggedright, singlelinecheck=off}
-
-% ##### new command for Roman number
-\newcommand{\rNum}[1]{\lowercase\expandafter{\romannumeral #1\relax}}
+\captionsetup[table]{justification=raggedright, singlelinecheck=off, labelsep=space}
+\captionsetup[figure]{labelsep=space}
 
 % ##### Font and Typing
 \XeTeXlinebreaklocale "th_TH" %สำหรับตัดคำ
@@ -299,7 +297,6 @@
 
 \newcommand{\makeabstract}[1]{
     %-- Abstract Page ------------------------------------------
-    \setcounter{page}{1}
     \newpage
     \addcontentsline{toc}{chapter}{\abstractnameth}
 
