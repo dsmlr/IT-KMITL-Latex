@@ -21,9 +21,44 @@
 \RequirePackage{etoolbox}
 \RequirePackage{array}
 
-% ##### Re-define words with English supports
-\input{definition-th.tex}
-% \input{definition-en.tex}
+% ##### Re-define words
+\newcommand{\useThai}{
+    \renewcommand{\bibname}{บรรณานุกรม}
+    \renewcommand{\contentsname}{สารบัญ}
+    \renewcommand{\chaptername}{บทที่}
+    \renewcommand{\figurename}{รูปที่}
+    \renewcommand{\tablename}{ตารางที่}
+    \renewcommand{\listfigurename}{สารบัญรูป}
+    \renewcommand{\listtablename}{สารบัญตาราง}
+    \renewcommand{\appendixname}{ภาคผนวก}
+
+    \newcommand{\ackname}{กิตติกรรมประกาศ}
+    \newcommand{\abstractnameen}{บทคัดย่อ ภาษาอังกฤษ}
+    \newcommand{\abstractnameth}{บทคัดย่อ}
+    \newcommand{\biographyname}{ประวัติผู้เขียน}
+    \newcommand{\pagecolumnname}{หน้า}
+    \newcommand{\continuename}{ต่อ}
+
+    % Use thai character sequence
+    \newcommand{\setthaienv}{}
+}
+\newcommand{\useEnglish}{
+    \renewcommand{\bibname}{Bibliography}
+    \renewcommand{\contentsname}{Content}
+    \renewcommand{\chaptername}{Chapter}
+    \renewcommand{\figurename}{Figure}
+    \renewcommand{\tablename}{Table}
+    \renewcommand{\listfigurename}{List of Figures}
+    \renewcommand{\listtablename}{List of Tables}
+    \renewcommand{\appendixname}{Appendix}
+
+    \newcommand{\ackname}{Acknowledgment}
+    \newcommand{\abstractnameen}{Abstract}
+    \newcommand{\abstractnameth}{Abstract Thai}
+    \newcommand{\biographyname}{Biography}
+    \newcommand{\pagecolumnname}{Page}
+    \newcommand{\continuename}{Continue}
+}
 
 % ##### If condition for Thai language
 \newcommand\ifthai[1]{
