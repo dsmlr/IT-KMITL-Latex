@@ -74,7 +74,7 @@ Clean all regeneratable files
 ```
 latexmk -c
 ```
-More options with `latexmk -help`
+More options with `latexmk -help` or `man latexmk`
 
 ## ผู้พัฒนา
 
