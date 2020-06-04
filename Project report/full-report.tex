@@ -9,11 +9,16 @@
 \useThai
 
 \graphicspath{ {images/} }
-
+\usepackage[super,square]{natbib}
 \makeatletter
 % \patchcmd{<cmd>}{<search>}{<replace>}{<succes>}{<failure>}
 \patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
 \patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
+\def\bibindent{2.3em}
+\let\old@biblabel\@biblabel
+\def\@biblabel#1{\old@biblabel{#1}\kern\bibindent}
+\let\old@bibitem\bibitem
+\def\bibitem#1{\old@bibitem{#1}\leavevmode\kern-\bibindent}
 \makeatother
 
 %1. Your thesis title (THAI)
