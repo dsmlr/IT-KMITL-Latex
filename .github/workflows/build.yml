@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install xelatex
+    - name: Install latexmk and xelatex
       run: sudo apt install -y latexmk texlive-xetex
     - name: Build with latexmk
       run: |
