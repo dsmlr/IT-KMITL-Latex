@@ -7,6 +7,7 @@ The latex class for writing a thesis and a cooperation report.
 
 - `Xelatex`
 - `Bibtex`
+- `latexmk`
 
 ## COOP Report
 
@@ -51,6 +52,29 @@ Latex class `itkmitlcoop.cls` นั้นถูกสร้างสำหร�
 ซึ่งจุดนี้ควรได้รับการปรับปรุงในอนาคตให้ตั้งค่าจากไฟล์ `full-report.tex` ได้ในตัว
 
 สำหรับผู้ที่ต้องการทำรูปแบบรายงานภาษาอังกฤษ สามารถใช้ `\useEnglish` แทน `\useThai` ใน `full-report.tex`
+
+## Installation
+
+### Ubuntu / Debian
+```
+sudo apt install latexmk
+sudo apt install texlive-xetex
+```
+
+## Usage
+Build
+```
+latexmk
+```
+Build and preview continuously
+```
+latexmk -pvc
+```
+Clean all regeneratable files
+```
+latexmk -c
+```
+More options with `latexmk -help` or `man latexmk`
 
 ## ผู้พัฒนา
 

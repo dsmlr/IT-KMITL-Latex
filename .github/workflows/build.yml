@@ -17,9 +17,9 @@ jobs:
       run: |
         cd "Project report"
         xelatex -synctex=1 -interaction=nonstopmode full-report.tex
-        # bibtex full-report
-        # xelatex -synctex=1 -interaction=nonstopmode full-report.tex
-        # xelatex -synctex=1 -interaction=nonstopmode full-report.tex
+        bibtex full-report
+        xelatex -synctex=1 -interaction=nonstopmode full-report.tex
+        xelatex -synctex=1 -interaction=nonstopmode full-report.tex
     - uses: actions/upload-artifact@v2
       with:
         name: project-report.pdf
