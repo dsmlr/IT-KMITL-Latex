@@ -338,7 +338,8 @@
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
             \textbf{หัวข้อโครงงาน} & \ThesisTitle \\
-            \textbf{นักศึกษา} & \Author, \AuthorTwo \\
+            \textbf{นักศึกษา} & \Author \\
+            & \AuthorTwo \\
             \textbf{ปริญญา} & วิทยาศาสตรบันฑิต \\
             \textbf{สาขาวิชา} & เทคโนโลยีสารสนเทศ \\
             \textbf{ปีการศึกษา} & \AcaY \\
@@ -362,7 +363,8 @@
     \begin{table}[h]
         \begin{tabularx}{\linewidth}{lX}
             \textbf{Project Title} & \MakeUppercase{\ThesisTitleENG} \\
-            \textbf{Student} & \AuthorENG, \AuthorTwoENG \\
+            \textbf{Student} & \AuthorENG \\
+            & \AuthorTwoENG \\
             \textbf{Degree} & Bachelor of Science \\
             \textbf{Program} & Information Technology \\
             \textbf{Academic Year} & \AcaYAD \\
