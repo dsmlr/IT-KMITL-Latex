@@ -11,9 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install xelatex
-      run: sudo apt-get install -y texlive-xetex
-    - name: Build xelatex with bibtex
+    - name: Install latexmk and xelatex
+      run: sudo apt install -y latexmk texlive-xetex
+    - name: Build with latexmk
+      run: |
+        cd "Project report"
+        latexmk
+    - name: Build with xelatex and bibtex
       run: |
         cd "Project report"
         xelatex -synctex=1 -interaction=nonstopmode full-report.tex
@@ -23,4 +27,4 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: project-report.pdf
-        path: "Project report/full-report.pdf"
+        path: "Project report/build/full-report.pdf"
