@@ -250,10 +250,10 @@
         \LARGE{\textbf{\MakeUppercase{\ThesisTitleENG}}} \vfill
         \Large{\textbf{โดย}} \\[0.5cm]
         \Large{\textbf{\Author}} \\
-        \Large{\textbf{\AuthorENG}} \\[0.5cm]
+        \Large{\textbf{\MakeUppercase{\AuthorENG}}} \\[0.5cm]
         	% TODO Hide when AuthorTwo is empty
         	\Large{\textbf{\AuthorTwo}} \\
-        \Large{\textbf{\AuthorTwoENG}} \vfill
+        \Large{\textbf{\MakeUppercase{\AuthorTwoENG}}} \vfill
         \large{\textbf{ปริญญานิพนธ์นี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรวิทยาศาสตรบัณฑิต \\
                 สาขาวิชาเทคโนโลยีสารสนเทศ \\
                 คณะเทคโนโลยีสารสนเทศ \\
