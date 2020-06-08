@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 \usepackage{hyphenat}
 \usepackage[numbers,square]{natbib}
+\usepackage{everyshi}
 
 % \useEnglish
 \useThai
@@ -20,6 +21,21 @@
 \def\@biblabel#1{\old@biblabel{#1}\kern\bibindent}
 \let\old@bibitem\bibitem
 \def\bibitem#1{\old@bibitem{#1}\leavevmode\kern-\bibindent}
+
+\def\@biblioProblem{%
+   \parindent \z@ \raggedright
+     \normalfont
+     \interlinepenalty\@M
+     \centering
+     \LARGE \bfseries \bibname\space(\continuename) \par\nobreak
+     \vskip1.15em
+}
+
+\gdef\@cont@heading{%
+    \@biblioProblem
+    %\@afterheading
+}
+
 \makeatother
 
 %1. Your thesis title (THAI)
@@ -105,6 +121,15 @@
     \clearpage
     \addcontentsline{toc}{chapter}{\bibname}
     \bibliographystyle{IEEEtran}
+
+    \makeatletter
+    \EveryShipout{%
+    \ifdim\pagetotal>\pagegoal% There is content overflow on this page % Bib
+            \aftergroup\@cont@heading
+    \fi%
+    }
+    \makeatother
+
     \bibliography{reference}
 
     \startappendix
