@@ -1,4 +1,4 @@
-$pdflatex = "xelatex %O %S -interaction=nonstopmode";
+$pdflatex = "xelatex %O %S -interaction=nonstopmode -synctex=1";
 $pdf_mode = 1;
 $dvi_mode = $postscript_mode = 0;
 

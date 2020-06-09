@@ -1366,6 +1366,13 @@ FUNCTION {format.edition}
   if$
 }
 
+FUNCTION {bold}
+{ duplicate$ empty$
+    {pop$ "" }
+    { "{\bfseries " swap$ * "}" * }
+  if$
+}
+
 % This is used to format the booktitle of a conference proceedings.
 % Here we use the "intype" field to provide the user a way to
 % override the word "in" (e.g., with things like "presented at")
@@ -1378,7 +1385,7 @@ FUNCTION {format.in.booktitle}
       this.status.std
       select.language
       intype missing$
-        { emphasize
+        { bold
           bbl.in " " *
         }
         { intype " " * }
@@ -1494,7 +1501,7 @@ FUNCTION {format.journal}
       this.status.std
       cap.status.std
       select.language
-      emphasize
+      bold
     }
   if$
 }
@@ -1964,7 +1971,7 @@ FUNCTION {book}
     { format.authors output.nonnull }
   if$
   name.or.dash
-  format.book.title.edition output
+  format.book.title.edition output bold
   format.series output
   author empty$
     { skip$ }
@@ -2123,7 +2130,7 @@ FUNCTION {misc}
   if.url.alt.interword.spacing
   format.authors output
   name.or.dash
-  format.article.title output
+  format.article.title output bold
   format.howpublished "howpublished" bibinfo.check output
   format.organization "organization" bibinfo.check output
   format.address "address" bibinfo.check output
