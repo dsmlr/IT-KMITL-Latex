@@ -416,11 +416,10 @@
 
 	\vfill
 
-	\begin{flushright}
+    \begin{flushright}
         \begin{tabular}{c l}
-            \large{\textbf{\Advisor}} & \large{\textbf{อาจารย์ที่ปรึกษา}} \\
-            \null \\
-            \large{\textbf{(...........................................)}} & \null
+            \large{\textbf{.................................................}} & \large{\textbf{อาจารย์ที่ปรึกษา}} \\[5pt]
+            \large{\textbf{\Advisor}}
         \end{tabular}
     \end{flushright}
 }
@@ -456,13 +455,13 @@
 
 	\begin{flushright}
         \begin{tabular}{c}
-            ........................................... \\
-            \Author \\
-            \null \\
-            ........................................... \\
+            ........................................... \\[5pt]
+            \Author \\[10pt]
+            ........................................... \\[5pt]
             \AuthorTwo
         \end{tabular}
     \end{flushright}
+
 }
 
 \newcommand\makeauthorbio{
