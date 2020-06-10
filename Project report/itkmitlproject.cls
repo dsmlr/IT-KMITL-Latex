@@ -488,7 +488,7 @@
 }
 
 \makeatletter
-% \patchcmd{<cmd>}{<search>}{<replace>}{<succes>}{<failure>}
+
 \patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
 \patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
 \def\bibindent{2.3em}
@@ -508,7 +508,6 @@
 
 \gdef\@cont@heading{%
     \@biblioProblem
-    %\@afterheading
 }
 
 \def\@chapter[#1]#2{

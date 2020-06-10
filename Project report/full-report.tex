@@ -99,7 +99,7 @@
 
     \makeatletter
     \EveryShipout{%
-    \ifdim\pagetotal>\pagegoal% There is content overflow on this page % Bib
+    \ifdim\pagetotal>\pagegoal%
             \aftergroup\@cont@heading
     \fi%
     }
