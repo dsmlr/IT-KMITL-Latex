@@ -1403,7 +1403,7 @@ FUNCTION {format.in.booktitle.edition}
     { this.to.prev.status
       this.status.std
       select.language
-      emphasize
+      bold
       edition empty$ 'skip$
         { ", " *
           edition
