@@ -12,30 +12,6 @@
 \useThai
 
 \graphicspath{ {images/} }
-\makeatletter
-% \patchcmd{<cmd>}{<search>}{<replace>}{<succes>}{<failure>}
-\patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
-\patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
-\def\bibindent{2.3em}
-\let\old@biblabel\@biblabel
-\def\@biblabel#1{\old@biblabel{#1}\kern\bibindent}
-\let\old@bibitem\bibitem
-\def\bibitem#1{\old@bibitem{#1}\leavevmode\kern-\bibindent}
-
-\def\@biblioProblem{%
-   \parindent \z@ \raggedright
-     \normalfont
-     \interlinepenalty\@M
-     \centering
-     \LARGE \bfseries \bibname\space(\continuename) \par\nobreak
-     \vskip1.15em
-}
-
-\gdef\@cont@heading{%
-    \@biblioProblem
-}
-
-\makeatother
 
 %1. Your thesis title (THAI)
 \newcommand{\ThesisTitle}{ชื่อโปรเจ็กต์จบ}
@@ -123,7 +99,7 @@
 
     \makeatletter
     \EveryShipout{%
-    \ifdim\pagetotal>\pagegoal% There is content overflow on this page % Bib
+    \ifdim\pagetotal>\pagegoal%
             \aftergroup\@cont@heading
     \fi%
     }

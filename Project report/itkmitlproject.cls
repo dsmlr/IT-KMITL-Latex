@@ -486,3 +486,50 @@
     {\appendixname\hspace{1ex}\thecontentslabel\hspace{2mm}}
     {}{\hfill \contentspage}
 }
+
+\makeatletter
+
+\patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
+\patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
+\def\bibindent{2.3em}
+\let\old@biblabel\@biblabel
+\def\@biblabel#1{\old@biblabel{#1}\kern\bibindent}
+\let\old@bibitem\bibitem
+\def\bibitem#1{\old@bibitem{#1}\leavevmode\kern-\bibindent}
+
+\def\@biblioProblem{%
+   \parindent \z@ \raggedright
+     \normalfont
+     \interlinepenalty\@M
+     \centering
+     \LARGE \bfseries \bibname\space(\continuename) \par\nobreak
+     \vskip1.15em
+}
+
+\gdef\@cont@heading{%
+    \@biblioProblem
+}
+
+\def\@chapter[#1]#2{
+    \ifnum \c@secnumdepth >\m@ne
+        \if@mainmatter
+            \refstepcounter{chapter}%
+            \typeout{\@chapapp\space\thechapter.}%
+            \addcontentsline{toc}{chapter}%
+                    {\protect\numberline{\thechapter}#1}%
+        \else
+            \addcontentsline{toc}{chapter}{#1}%
+        \fi
+    \else
+        \addcontentsline{toc}{chapter}{#1}%
+    \fi
+    \chaptermark{#1}%
+    \if@twocolumn
+        \@topnewpage[\@makechapterhead{#2}]%
+    \else
+        \@makechapterhead{#2}%
+        \@afterheading
+    \fi
+}
+
+\makeatother
