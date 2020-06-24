@@ -1,46 +1,35 @@
-# ITKMITL Latex Template for Co-operative Studies & Thesis Report
+# ITKMITL Cooperative Studies & Thesis Report Latex Template
 
-The Latex class for creating your own thesis or cooperative studies report for 4th year Undergraduate student<br>
-If you liked to contribute to this project, you may fork and create a pull request to this repository, for the benefits of education
+A latex class created as template for your own thesis or cooperative studies report for 4th year Undergraduate student at King Mongkut's Institute of Technology Ladkrabang (KMITL) based on Faculty of Information Technology guidelines.<br>
 
-เทมเพลทคลาสเลเท็กซ์สำหรับการจัดทำรูปเล่มรายงานสหกิจฯ และวิทยานิพนธ์สำหรับนักศึกษาปีที่ 4<br>
-หากท่านอยากที่จะมีส่วนช่วยในโปรเจ็กต์นี้ ก็สามารถ fork โปรเจ็กต์นี้ และสร้าง pull request กลับมาเพื่อการศึกษาสำหรับนักศึกษารุ่นต่อ ๆ ไป
+เทมเพลทคลาสเลเท็กซ์สำหรับการจัดทำรูปเล่มรายงานสหกิจฯ และวิทยานิพนธ์ สำหรับนักศึกษาปีที่ 4 สถาบันพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (KMITL)<br>
+ใน Repository นี้เราใช้มาตรฐานรายงานของคณะเทคโนโลยีสารสนเทศ 
 
-## Build tools
-
-To create a report, choose `xelatex` and `bibtex` as Latex builder.<br>
-เพื่อสร้างรายงาน ให้ท่านใช้ `xelatex` และ `bibtex` เพื่อสร้างไฟล์รายงาน
-
-> `xelatex` will be automatically available after installation of Miktex<br> > `xelatex` จะพร้อมใช้งานอย่างอัตโนมัติหลังจากท่านติดตั้ง Miktex แล้ว
 
 ## Files & Folders
+การจัดเรียงไฟล์นั้นถูกเก็บไว้ใน README.md ของโฟล์เดอร์
+- [COOP Report](https://github.com/dsmlr/IT-KMITL-Latex/blob/master/COOP%20report/README.md) สำหรับสหกิจศึกษา
+- [Project Report](https://github.com/dsmlr/IT-KMITL-Latex/blob/master/Project%20report/README.md) สำหรับวิทยานิพนธ์
 
-### Cooperative Studies
 
-ภายในโฟลเดอร์ `COOP Report` นั้นจัดเตรียม Latex สำหรับจัดทำรูปเล่มรายงานสหกิจซึ่งสามารถใช้งานได้ในทันทีเพียงแค่แก้ไขข้อมูลพื้นฐานของผู้เขียน, บทคัดย่อ, และเนื้อหา 5 บท โดยไฟล์ของทั้งห้าบทนั้นถูกแยกและใช้วิธีการ `\include` เข้าไปในไฟล์หลัก `full-report.tex` ดังนั้นผู้ใช้สามารถเขียนแต่ละบทแยกลงไปในไฟล์ที่จัดเตรียมไว้ให้ได้ทันที
+## Build tools
+เราจำเป็นที่จะต้องใช้ `xelatex`, `bibtex` และ `latexmk` เพื่อสร้างไฟล์รายงาน
 
-- `/images` สำหรับใส่ภาพเพื่อใช้แทรกรูปประกอบลงในเล่มรายงาน
-- `full-report.tex` ไฟล์หลักที่ใช้สำหรับ `run & build` และสำหรับข้อมูลพื้นฐานของผู้เขียน รวมถึงบทคัดย่อ, กิติกรรมประกาศ, และอื่น ๆ
-- `chapter[1-5].tex` ไฟล์สำหรับแต่ละบท
-- `appendix.tex` ไฟล์ภาคผนวก
-- `reference.bib` ไฟล์ bibtex (บรรณานุกรม)
-- `itkmitlcoop.cls` ไฟล์ class
-- `example.pdf` ไฟล์ตัวอย่างเล่มที่สร้างจาก `itkmitlcoop.cls`
-- `full-report.pdf` ไฟล์ output หลังจากการ compile
+ท่านสามารถเข้าไปอ่านวิธีการติดตั้งได้ที่ wiki ของเราบน GitHub
 
-### Thesis
-
-Currently, thesis template is not available for use. If you like to support us, please contribute to the repository by creating the pull request.<br>
-สำหรับเทมเพลท Thesis ในขณะนี้ยังไม่ได้ถูกพัฒนาขึ้น แต่หากท่านอยากที่จะช่วยสนับสนุนในด้านการทำเทมเพลท ท่านสามารถช่วยเหลือเราโดยการสร้าง Pull Request มาที่ repository นี้
 
 ## License
-
 This project is licensed as MIT License. Please checkout [LICENSE.md](https://github.com/dsmlr/IT-KMITL-Latex/blob/master/LICENSE) for more detail.<br>
-โปรเจ็กต์นี้มีข้อตกลงการใช้งานประเภท MIT License ท่านสามารถอ่านต่อได้ที่ไฟล์ [LICENSE.md](https://github.com/dsmlr/IT-KMITL-Latex/blob/master/LICENSE)
+โปรเจ็กต์นี้มีข้อตกลงการใช้งานประเภท MIT ท่านสามารถอ่านต่อได้ที่ไฟล์ [LICENSE.md](https://github.com/dsmlr/IT-KMITL-Latex/blob/master/LICENSE)
 
-## Developer
+## Contribution 
+หากท่านอยากที่จะมีส่วนช่วยในโปรเจ็กต์นี้ เราได้เขียนวิธีไว้แล้วที่ [CONTRIBUTING.md](CONTRIBUTING.md)
 
-นาย บุญฤทธิ์ พิริย์โยธินกุล
+## Contributor
+
+[![Contributor List](https://contributors-img.web.app/image?repo=dsmlr/IT-KMITL-Latex)](https://github.com/dsmlr/IT-KMITL-Latex/graphs/contributors)
+
+จัดทำโดย นาย บุญฤทธิ์ พิริย์โยธินกุล
 
 ---
 
