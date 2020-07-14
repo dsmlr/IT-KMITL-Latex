@@ -20,6 +20,8 @@
 \RequirePackage{subfigure}
 \RequirePackage{etoolbox}
 \RequirePackage{array}
+\RequirePackage{everyshi}
+% \RequirePackage{biblatex}
 
 % ##### Re-define words
 \newcommand{\useThai}{
@@ -497,17 +499,13 @@
 \let\old@bibitem\bibitem
 \def\bibitem#1{\old@bibitem{#1}\leavevmode\kern-\bibindent}
 
-\def\@biblioProblem{%
+\def\@cont@heading{
    \parindent \z@ \raggedright
      \normalfont
      \interlinepenalty\@M
      \centering
      \LARGE \bfseries \bibname\space(\continuename) \par\nobreak
      \vskip1.15em
-}
-
-\gdef\@cont@heading{%
-    \@biblioProblem
 }
 
 \def\@chapter[#1]#2{

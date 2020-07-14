@@ -6,7 +6,7 @@
 \usepackage{hyperref}
 \usepackage{hyphenat}
 \usepackage[numbers,square]{natbib}
-\usepackage{everyshi}
+\usepackage{lipsum}
 
 % \useEnglish
 \useThai
@@ -94,18 +94,23 @@
     \include{chapter5}
 
     \clearpage
+
+    \def\inbib{1}
     \addcontentsline{toc}{chapter}{\bibname}
     \bibliographystyle{IEEEtran-kmitl}
-
     \makeatletter
-    \EveryShipout{%
-    \ifdim\pagetotal>\pagegoal%
-            \aftergroup\@cont@heading
-    \fi%
+    \EveryShipout{
+        \ifdim\pagetotal>\pagegoal
+            \if\inbib1
+                \aftergroup\@cont@heading
+            \else
+            \fi
+        \fi
     }
     \makeatother
 
     \bibliography{reference}
+    \def\inbib{0}
 
     \startappendix
     \include{appendix}
