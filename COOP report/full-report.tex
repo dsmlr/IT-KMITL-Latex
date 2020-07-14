@@ -13,41 +13,43 @@
 \patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
 \makeatother
 
-%1. Your thesis title (THAI)
+% Your thesis title (THAI)
 \newcommand{\ThesisTiTle}{ชื่อโปรเจ็กต์จบ}
-%2. Your thesis title (ENG)
-\newcommand{\ThesisTiTleENG}{Project name (English)}
-%3. Your name
+% Your thesis title (ENG)
+\newcommand{\ThesisTiTleENG}{Project name}
+% Your name
 \newcommand{\AuName}{ชื่อ นามสกุล}
-%4. Your name ENG
+% Your name ENG
 \newcommand{\AuNameENG}{Name Surname}
-%5. Your student ID
-\newcommand{\SId}{รหัสประจำตัว}
-%6. Your advisor
+% Department / Program
+\newcommand{\DepartmentENG}{Information Technology}
+% Your student ID
+\newcommand{\SId}{xx07xxxx}
+% Your advisor
 \newcommand{\Advisor}{ชื่อที่ปรึกษา}
-%7. Advisor name in English
-\newcommand{\AdvisorENG}{Advisor Name}
-%8. Your advisor employee
+% Your advisor
+\newcommand{\AdvisorENG}{AdvisorName AdvisorSurname}
+% Your advisor employee
 \newcommand{\Exami}{ชื่อพนักงานที่ปรึกษา}
-%9. สถานประกอบการ
+% ชื่อสถานประกอบการ
 \newcommand{\Company}{ชื่อบริษัท}
-%10. ภาคเรียนที่ (in normal letters)
+% ภาคเรียนที่ (in normal letters)
 \newcommand{\Sem}{1}
-%11. ปีการศึกษา (in normal letters)
+% ปีการศึกษา (in normal letters)
 \newcommand{\AcaY}{2561}
-%12. ปีการศึกษา (in normal letters)
+% ปีการศึกษา (in normal letters)
 \newcommand{\AcaYAD}{2018}
-%13. วันส่งรายงาน
+% วันส่งรายงาน
 \newcommand{\SubD}{10 พฤศจิกายน พ.ศ. 2561}
-%14. วันเริ่มทำงาน
+% วันเริ่มทำงาน
 \newcommand{\StartDWork}{23 กรกฎาคม พ.ศ. 2561}
-%15. วันสุดท้ายของการทำงาน
+% วันสุดท้ายของการทำงาน
 \newcommand{\EndDWork}{30 พฤศจิกายน พ.ศ. 2561}
-%16. ที่อยู่สถานประกอบการ
+% ที่อยู่สถานประกอบการ
 \newcommand{\Address}{ที่อยู่}
-%17. เว็บไซต์สถานประกอบการ
-\newcommand{\Website}{เว็บไซต์}
-%18. ตำแหน่งานที่ปฏิบัติ
+% เว็บไซต์สถานประกอบการ
+\newcommand{\Website}{https://example.com}
+% ตำแหน่งานที่ปฏิบัติ
 \newcommand{\Position}{ตำแหน่งงานที่ปฏิบัติ}
 %19. สาขาวิชา
 \newcommand{\Department}{เทคโนโลยีสารสนเทศ}
@@ -68,6 +70,7 @@
     \makeletter
     \makeack{
         \begin{enumerate}
+            \item คุณ ชื่อ สกุล \quad ตำแหน่ง xxxxxxx (พนักงานที่ปรึกษา)
             \item คุณ ชื่อ สกุล \quad ตำแหน่ง xxxxxxx
         \end{enumerate}
     }
@@ -75,8 +78,9 @@
     \makeabstract{
     	บทคัดย่อ
     }
+
    \makeabstracteng{
-       Abstract eng
+       Abstract
    }
 
     \newpage
