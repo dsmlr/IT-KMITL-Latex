@@ -2,9 +2,9 @@
 
 ![CI](https://github.com/dobakung/IT-KMITL-Latex/workflows/CI/badge.svg)
 
-A latex class created as template for your own thesis or cooperative studies report for 4th year Undergraduate student at King Mongkut's Institute of Technology Ladkrabang (KMITL) based on Faculty of Information Technology guidelines.<br>
+A LaTeX class created as a template for your own thesis or cooperative studies report for 4th year undergraduate students at King Mongkut's Institute of Technology Ladkrabang (KMITL) based on Faculty of Information Technology's guidelines.<br>
 
-เทมเพลทคลาสเลเท็กซ์สำหรับการจัดทำรูปเล่มรายงานสหกิจฯ และวิทยานิพนธ์ สำหรับนักศึกษาปีที่ 4 สถาบันพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (KMITL)<br>
+เทมเพลทคลาส LaTeX สำหรับการจัดทำรูปเล่มรายงานสหกิจฯ และวิทยานิพนธ์ สำหรับนักศึกษาปีที่ 4 สถาบันพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (KMITL)<br>
 ใน Repository นี้เราใช้มาตรฐานรายงานของคณะเทคโนโลยีสารสนเทศ 
 
 
@@ -17,7 +17,7 @@ A latex class created as template for your own thesis or cooperative studies rep
 ## Build tools
 เราจำเป็นที่จะต้องใช้ `xelatex`, `bibtex` และ `latexmk` เพื่อสร้างไฟล์รายงาน
 
-ท่านสามารถเข้าไปอ่านวิธีการติดตั้งได้ที่ wiki ของเราบน GitHub
+อ่านวิธีการติดตั้งได้จากหน้า Wiki
 
 ## License
 This project is licensed as MIT License. Please checkout [LICENSE.md](https://github.com/dsmlr/IT-KMITL-Latex/blob/master/LICENSE) for more detail.<br>
