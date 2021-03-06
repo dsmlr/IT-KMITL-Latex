@@ -27,20 +27,21 @@
 \XeTeXlinebreakskip = 0pt plus 1pt
 
 % If Angsana is installed, use this line
-\setmainfont[Scale=1.2, Script=Thai]{Angsana New}
+% \setmainfont[Scale=1.2, Script=Thai]{Angsana New}
 
 % If you need to call Angsana locally from the project, use these lines
 % Note: edit font file names as needed
-% \setmainfont{Angsana New}[
-%     Path = fonts/,
-%     UprightFont = Angsa,
-%     ItalicFont = Angsai,
-%     BoldFont = Angsab,
-%     BoldItalicFont = Angsabi,
-%     Extension = .ttf,
-%     Script=Thai,
-%     Scale=1.2
-% ]
+\setmainfont{Angsana New}[
+	Path = fonts/,
+	UprightFont = Angsana,
+	ItalicFont = Angsana-Italic,
+	BoldFont = Angsana-Bold,
+	BoldItalicFont = Angsana-BoldItalic,
+	Extension = .ttf,
+	Script=Thai,
+	Scale=1.2
+]
+
 
 \linespread{1.2}
 
