@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{itkmitlproject}[2019/05/21]
+\ProvidesClass{itkmitlproject}[2021/03/06]
 
 \LoadClass[11pt, a4paper, oneside]{book}
 
@@ -78,14 +78,15 @@
 \XeTeXlinebreaklocale "th_TH" %สำหรับตัดคำ
 \XeTeXlinebreakskip = 0pt plus 1pt
 \linespread{1.3}
-\setmainfont{Kinnari}[
+\setmainfont{Angsana New}[
 	Path = fonts/,
-	UprightFont = Kinnari,
-	ItalicFont = *-Italic,
-	BoldFont = *-Bold,
-	BoldItalicFont = *-BoldItalic,
-	Extension = .otf,
+	UprightFont = Angsana,
+	ItalicFont = Angsana-Italic,
+	BoldFont = Angsana-Bold,
+	BoldItalicFont = Angsana-BoldItalic,
+	Extension = .ttf,
 	Script=Thai
+    Scale=1.45
 ]
 
 % ##### Set Chapter and Section Style
