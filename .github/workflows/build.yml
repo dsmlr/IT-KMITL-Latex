@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  build-project:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -28,3 +28,24 @@ jobs:
       with:
         name: project-report.pdf
         path: "Project report/build/full-report.pdf"
+  build-coop:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install latexmk and xelatex
+      run: sudo apt install -y latexmk texlive-xetex
+    - name: Build with latexmk
+      run: |
+        cd "COOP report"
+        latexmk
+    - name: Build with xelatex and bibtex
+      run: |
+        cd "COOP report"
+        xelatex -synctex=1 -interaction=nonstopmode full-report.tex
+        bibtex full-report
+        xelatex -synctex=1 -interaction=nonstopmode full-report.tex
+        xelatex -synctex=1 -interaction=nonstopmode full-report.tex
+    - uses: actions/upload-artifact@v2
+      with:
+        name: project-report.pdf
+        path: "COOP report/build/full-report.pdf"
