@@ -14,7 +14,7 @@ jobs:
     - name: Install latexmk and xelatex
       run: sudo apt install -y latexmk texlive-xetex
     - name: Extract fonts
-      run:
+      run: |
         cd "Project report"
         unzip fonts.zip
     - name: Build with latexmk
@@ -39,7 +39,7 @@ jobs:
     - name: Install latexmk and xelatex
       run: sudo apt install -y latexmk texlive-xetex
     - name: Extract fonts
-      run:
+      run: |
         cd "Project report"
         unzip fonts.zip
     - name: Build with latexmk
