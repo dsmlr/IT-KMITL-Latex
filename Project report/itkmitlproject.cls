@@ -85,8 +85,8 @@
 	BoldFont = Angsana-Bold,
 	BoldItalicFont = Angsana-BoldItalic,
 	Extension = .ttf,
-	Script=Thai
-    Scale=1.45
+	Script=Thai,
+	Scale=1.45
 ]
 
 % ##### Set Chapter and Section Style
