@@ -40,7 +40,7 @@ jobs:
       run: sudo apt install -y latexmk texlive-xetex
     - name: Extract fonts
       run: |
-        cd "Project report"
+        cd "COOP report"
         unzip fonts.zip
     - name: Build with latexmk
       run: |
