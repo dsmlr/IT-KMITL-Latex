@@ -1,0 +1,120 @@
+\documentclass{itkmitlproject}
+
+\usepackage{afterpage}
+\usepackage{graphicx,amsmath,latexsym,amssymb,amsthm}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{hyphenat}
+\usepackage[numbers,square]{natbib}
+\usepackage{lipsum}
+
+% \useEnglish
+\useThai
+
+\graphicspath{ {images/} }
+
+%1. Your thesis title (THAI)
+\newcommand{\ThesisTitle}{ชื่อโปรเจ็กต์จบ}
+%2. Your thesis title (ENG)
+\newcommand{\ThesisTitleENG}{Project name (English)}
+%3. Author name
+\newcommand{\Author}{ชื่อ นามสกุล}
+%4. Author name ENG
+\newcommand{\AuthorENG}{Name Surname}
+%5. Author student ID
+\newcommand{\SId}{59070000}
+%6. Author 2 name
+\newcommand{\AuthorTwo}{ชื่อ นามสกุล}
+%7. Author 2 name ENG
+\newcommand{\AuthorTwoENG}{Name Surname}
+%8. Author 2 student ID
+\newcommand{\SIdTwo}{59070000}
+%9. Advisor name
+\newcommand{\Advisor}{ชื่อที่ปรึกษา}
+%10. Advisor name ENG
+\newcommand{\AdvisorENG}{Advisor Name}
+%11. ภาคเรียนที่
+\newcommand{\Sem}{1}
+%12. ปีการศึกษา พ.ศ.
+\newcommand{\AcaY}{2562}
+%13. ปีการศึกษา ค.ศ.
+\newcommand{\AcaYAD}{2019}
+%14. วันส่งรายงาน
+\newcommand{\SubD}{10 พฤศจิกายน พ.ศ. 2561}
+%15. Copyright year (AD)
+\newcommand{\CopyrightYAD}{2020}
+
+\begin{document}
+    \frontmatter
+    \lhead{}\rhead{}\chead{}\lfoot{}\cfoot{\thepage}\rfoot{}
+    \makecover
+    \makeinnercover
+    \makeengcover
+    \makecopyrightcover
+    \makethesiscert
+    \makeprojectcert
+
+    % Setting margin for page numbering on frontmatter
+    \newgeometry{top=1in, bottom=1in, left=1.5in, right=1in, includefoot}
+    \setcounter{page}{1}
+    \pagenumbering{Roman}
+
+    \makeabstract{
+        บทคัดย่อ
+    }
+
+    \makeabstracteng{
+        Abstract eng
+    }
+
+    \makeack
+
+    \newpage
+    \addcontentsline{toc}{chapter}{\contentsname}
+    \tableofcontents
+
+    \newpage
+    \addcontentsline{toc}{chapter}{\listtablename}
+    \listoftables
+
+    \newpage
+    \addcontentsline{toc}{chapter}{\listfigurename}
+    \listoffigures
+
+    % Reset frontmatter page numbering margin, back to original margin from class file
+    \restoregeometry
+
+    \mainmatter
+    \lhead{}\rhead{\thepage}\chead{}\lfoot{}\cfoot{}\rfoot{}
+
+    \include{chapter1}
+    \include{chapter2}
+    \include{chapter3}
+    \include{chapter4}
+    \include{chapter5}
+
+    \clearpage
+
+    \def\inbib{1}
+    \addcontentsline{toc}{chapter}{\bibname}
+    \bibliographystyle{IEEEtran-kmitl}
+    \makeatletter
+    \EveryShipout{
+        \ifdim\pagetotal>\pagegoal
+            \if\inbib1
+                \aftergroup\@cont@heading
+            \else
+            \fi
+        \fi
+    }
+    \makeatother
+
+    \bibliography{reference}
+    \def\inbib{0}
+
+    \startappendix
+    \include{appendix}
+
+    \makeauthorbio
+
+\end{document}
