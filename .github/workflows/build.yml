@@ -55,5 +55,5 @@ jobs:
         xelatex -synctex=1 -interaction=nonstopmode full-report.tex
     - uses: actions/upload-artifact@v2
       with:
-        name: project-report.pdf
+        name: coop-report.pdf
         path: "COOP report/build/full-report.pdf"
